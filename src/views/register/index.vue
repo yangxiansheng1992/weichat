@@ -6,39 +6,59 @@
           <mt-button class="back-btn" icon="back">取消</mt-button>
         </router-link>
       </mt-header>
-      <div class="blank"/>
+      <div class="blank" />
       <div class="content">
         <div class="inputs">
-          <mt-field v-model="username.value"
-                    :state="username.state"
-                    :attr="{ maxlength: 20 }"
-                    @blur.native.capture="validation"
-                    class="important" label="用户名" placeholder="请填写帐号"/>
-          <mt-field v-model="password.value"
-                    :state="password.state"
-                    type="password" class="important" label="登录密码"
-                    :attr="{ maxlength: 20 }"
-                    @blur.native.capture="validation"
-                    placeholder="6-20个英文字母或数字"/>
-          <mt-field v-model="password_confirm.value"
-                    :state="password_confirm.state"
-                    type="password" class="important"
-                    label="确认密码"
-                    :attr="{ maxlength: 20 }"
-                    @blur.native.capture="validation"
-                    placeholder="6-20个英文字母或数字"/>
-          <mt-field v-model="mobile.value"
-                    :state="mobile.state"
-                    :attr="{ maxlength: 11 }"
-                    @blur.native.capture="validation"
-                    type="tel" class="important" label=" 手机号码"
-                    placeholder="请填入常用手机号码"/>
-          <mt-field v-model="userup_number.value"
-                    :state="userup_number.state"
-                    label=" 邀请码" placeholder="没有可不填"/>
+          <mt-field
+            v-model="username.value"
+            :state="username.state"
+            :attr="{ maxlength: 20 }"
+            @blur.native.capture="validation"
+            class="important"
+            label="用户名"
+            placeholder="请填写帐号"
+          />
+          <mt-field
+            v-model="password.value"
+            :state="password.state"
+            type="password"
+            class="important"
+            label="登录密码"
+            :attr="{ maxlength: 20 }"
+            @blur.native.capture="validation"
+            placeholder="6-20个英文字母或数字"
+          />
+          <mt-field
+            v-model="password_confirm.value"
+            :state="password_confirm.state"
+            type="password"
+            class="important"
+            label="确认密码"
+            :attr="{ maxlength: 20 }"
+            @blur.native.capture="validation"
+            placeholder="6-20个英文字母或数字"
+          />
+          <mt-field
+            v-model="mobile.value"
+            :state="mobile.state"
+            :attr="{ maxlength: 11 }"
+            @blur.native.capture="validation"
+            type="tel"
+            class="important"
+            label=" 手机号码"
+            placeholder="请填入常用手机号码"
+          />
+          <mt-field
+            v-model="userup_number.value"
+            :state="userup_number.state"
+            label=" 邀请码"
+            placeholder="没有可不填"
+          />
         </div>
         <div class="container">
-          <mt-button class="login-btn" type="default" @click="register">注册</mt-button>
+          <mt-button class="login-btn" type="default" @click="register"
+            >注册</mt-button
+          >
         </div>
         <div class="footer">
           <a class="hint" @click="redirect('/login')">已经有帐号？立即登入</a>
@@ -50,7 +70,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       username: { value: '', state: '' },
       password: { value: '', state: '' },
@@ -60,10 +80,10 @@ export default {
     };
   },
   methods: {
-    redirect(path) {
+    redirect (path) {
       this.$router.push(path);
     },
-    validation() {
+    validation () {
       try {
         if (/^[a-zA-Z0-9]{4,10}$/.test(this.username.value)) {
           this.username.state = 'success';
@@ -97,102 +117,102 @@ export default {
         return false;
       }
     },
-    register() {
+    register () {
     },
   },
 };
 </script>
 
 <style scoped lang="scss">
-  .register {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background-color: white;
+.register {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
 
-    .header {
-      background-color: transparent;
+  .header {
+    background-color: transparent;
 
-      .back-btn {
-        color: #0bb607;
-      }
+    .back-btn {
+      color: #0bb607;
     }
+  }
 
-    .blank {
-      height: 40px;
-    }
+  .blank {
+    height: 40px;
+  }
 
-    .content {
-      text-align: center;
-      margin-top: 1rem;
+  .content {
+    text-align: center;
+    margin-top: 1rem;
 
-      .inputs {
-        display: inline-block;
-        text-align: left;
-        width: 90%;
-      }
-
-      .container {
-        text-align: center;
-
-        .login-btn {
-          margin-top: 2rem;
-          background-color: #0bb607;
-          color: white;
-          width: 90%;
-        }
-      }
-    }
-
-    .important {
+    .inputs {
       display: inline-block;
-      width: 100%;
-
-      &::before {
-        position: absolute;
-        content: "*";
-        top: 20px;
-        left: 0;
-        color: red;
-      }
+      text-align: left;
+      width: 90%;
     }
 
-    .footer {
-      display: inline-block;
+    .container {
       text-align: center;
-      width: 100%;
 
-      .hint {
-        width: 90%;
+      .login-btn {
         margin-top: 2rem;
-        font-size: 12px;
-        color: #5f5f5f;
-        text-align: left;
-        display: inline-block;
+        background-color: #0bb607;
+        color: white;
+        width: 90%;
       }
     }
   }
 
-  .slide-enter-active,
-  .slide-leave-active {
-    transition: all 0.3s;
+  .important {
+    display: inline-block;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      content: "*";
+      top: 20px;
+      left: 0;
+      color: red;
+    }
   }
 
-  .slide-enter,
-  .slide-leave-to {
-    transform: translate3d(100%, 0, 0);
+  .footer {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+
+    .hint {
+      width: 90%;
+      margin-top: 2rem;
+      font-size: 12px;
+      color: #5f5f5f;
+      text-align: left;
+      display: inline-block;
+    }
   }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
 </style>
 <style>
-  /*複寫讀取mask的z-index*/
-  .mint-indicator-wrapper {
-    z-index: 2;
-  }
+/*複寫讀取mask的z-index*/
+.mint-indicator-wrapper {
+  z-index: 2;
+}
 
-  .mint-indicator-mask {
-    z-index: 2;
-  }
+.mint-indicator-mask {
+  z-index: 2;
+}
 </style>

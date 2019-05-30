@@ -1,0 +1,61 @@
+$prefixForWebkit: true !default;
+$prefixForMozilla: true !default;
+$prefixForMicrosoft: true !default;
+$prefixForOpera: true !default;
+$prefixNo: true !default;
+
+// 给属性加浏览器前缀
+@mixin prefixer($property, $value, $prefixes: o webkit) {
+  @each $prefix in $prefixes {
+    @if $prefix==webkit and $prefixForWebkit==true {
+      -webkit-#{$property}: $value;
+    }
+
+    @else if $prefix==moz and $prefixForMozilla==true {
+      -moz-#{$property}: $value;
+    }
+
+    @else if $prefix==ms and $prefixForMicrosoft==true {
+      -ms-#{$property}: $value;
+    }
+
+    @else if $prefix==o and $prefixForOpera==true {
+      -o-#{$property}: $value;
+    }
+  }
+
+  @if $prefixNo {
+    #{$property}: $value;
+  }
+}
+
+// 给属性值加浏览器前缀
+@mixin prefixer-value($property, $value, $prefixes: webkit moz) {
+  @each $prefix in $prefixes {
+    @if $prefix==webkit and $prefixForWebkit==true {
+      #{$property}: -webkit-#{$value};
+    }
+
+    @else if $prefix==moz and $prefixForMozilla==true {
+      #{$property}: -moz-#{$value};
+    }
+
+    @else if $prefix==o and $prefixForMozilla==true {
+      #{$property}: -o-#{$value};
+    }
+
+    @else if $prefix==ms and $prefixForMicrosoft==true {
+      #{$property}: -ms-#{$value};
+    }
+  }
+
+  @if $prefixNo {
+    #{$property}: $value;
+  }
+}
+
+// px转rem
+@function px2rem($px) {
+  $baseFontSize: 16px;
+  @return ($px / $baseFontSize)+rem;
+}

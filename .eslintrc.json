@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/base",
+    "airbnb-base"
+  ],
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-plusplus": "off",
+    "camelcase": "off",
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "linebreak-style": [
+      "off",
+      "windows"
+    ],
+    "import/no-unresolved": "off"
+  }
+}

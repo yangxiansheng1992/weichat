@@ -1,12 +1,101 @@
 <template>
-  <div id="app">
-    <h1>我是chat</h1> 
+  <div class="chat">
+    <h1>我是chat,学习promise</h1>
+    <div class="content">
+      <input type="text" v-model="firstName" class="text" />
+      <input type="text" v-model="obj.a" class="text" @blur="onBlur" />
+      <p>{{ fullName }}</p>
+      <p>{{ obj.a }}</p>
+    </div>
+    <div class="chat-room">
+      <chat-item :data="item" v-for="item in chatList" :key="item.title" />
+    </div>
   </div>
 </template>
+<script>
+import mockApi from '../../mockService/mockApi';
+import ChatItem from './chat-item/index';
+
+export default {
+  components: {
+    ChatItem,
+  },
+  data () {
+    return {
+      fullName: '',
+      lastName: 'Yang',
+      firstName: '',
+      obj: {
+        a: 123
+      },
+      chatList: [],
+    }
+  },
+  created () {
+    this.promiseA(3000).then((res) => {
+      console.log(res)
+    });
+    //======>
+    //这表明只要声明了这个函数是async，那么内部不管怎么处理，都是返回一个promise；
+    console.log(this.promiseC());
+    this.promiseD().then((res) => {
+      console.log(res);
+    })
+    //<=======
+    this.getChatList();
+  },
+  watch: {
+    firstName (newValute, oldValue) {
+      this.fullName = this.lastName + newValute + oldValue;
+    },
+    promise () {
+      this.promiseA(3000);
+    }
+  },
+  methods: {
+    onBlur () {
+      this.obj.a = 456;
+    },
+    promiseA (timeNumber) {
+      return new Promise((resolve, reject) => {
+        if (typeof timeNumber != 'number') reject(new Error('参数必须是Number类型'));
+        setTimeout(() => {
+          resolve(this.promiseB(5000));
+        }, timeNumber)
+
+      })
+    },
+    promiseB (timeNumber) {
+      return new Promise((resolve, reject) => {
+        if (typeof timeNumber != 'number') reject(new Error('参数必须是Number类型'));
+        setTimeout(() => {
+          resolve('我经过8秒才出来');
+        }, timeNumber)
+      })
+    },
+    async promiseC () {
+      return '我是Promise'
+    },
+    async promiseD () {
+      return Promise.resolve('我是Promise')
+    },
+    getChatList () {
+      mockApi.getChatList()
+        .then(({ data, status }) => {
+          if (!status) {
+            // showToast('呀，出错啦！');
+          }
+          this.chatList = [...data.data];
+        })
+        .catch((err) => {
+          // showToast(err);
+        });
+    },
+  }
+}
+</script>
 
 <style lang="scss" scoped>
-h1{
-  font-size: 50px;
-  color: red;
-}
+@import "../../styles/compass.scss";
+@import "./index.scss";
 </style>

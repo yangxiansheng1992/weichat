@@ -1,0 +1,38 @@
+
+$percent:100%;
+$height:px2rem(30px);
+.chat{
+  width: $percent;
+  height: $percent;
+  padding: 50px 0 0;
+  overflow: auto;
+  h1{
+    width: $percent;
+    height: $height;
+  }
+  .content{
+    width: $percent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input{
+      height: $height;
+    }
+    .text{
+      width: $percent;
+    }
+    .btn{
+      width: .7*$percent;
+      background-color: cadetblue;
+    }
+    p{
+      width: $percent;
+      height: $height;
+      color: red;
+    }
+  }
+  .chat-room{
+    width: $percent;
+  }
+}

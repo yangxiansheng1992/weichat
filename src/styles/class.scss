@@ -1,0 +1,90 @@
+@import './color.scss';
+@import "./compass.scss";
+
+.yellow-font {
+  color: $yellow;
+}
+
+.purple-font {
+  color: $purple;
+}
+
+.black-font {
+  color: $black;
+}
+
+.white-font {
+  color: $white;
+}
+
+.red-font {
+  color: $red;
+}
+
+.font-10px {
+  font-size: px2rem(10px);
+}
+
+.font-12px {
+  font-size: px2rem(12px);
+}
+
+.font-14px {
+  font-size: px2rem(14px);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.br {
+  border-right: 1px solid $border_color;
+}
+
+.bt {
+  border-top: 1px solid $border_color;
+}
+
+.bl {
+  border-left: 1px solid $border_color;
+}
+
+.bb {
+  border-bottom: 1px solid $border_color;
+}
+
+.mt-5px {
+  margin-top: px2rem(5px);
+}
+
+.mr-5px {
+  margin-right: px2rem(5px);
+}
+
+.mb-5px {
+  margin-bottom: px2rem(5px);
+}
+
+.ml-5px {
+  margin-left: px2rem(5px);
+}
+
+.clear {
+  zoom: 1;
+
+  &::after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}

@@ -17,25 +17,24 @@ export default new Router({
     {
       path: '/',
       redirect:'chat',
-      component:Chat,
     },
     {
-      path: '/',
+      path: '/chat',
       name:'chat',
       component:Chat,
     },
     {
-      path: 'clientList',
+      path: '/clientList',
       name:'clientList',
       component:ClientList,
     },
     {
-      path: 'find',
+      path: '/find',
       name:'find',
       component:Find,
     },
     {
-      path: 'me',
+      path: '/me',
       name:'me',
       component:Me,
     },
