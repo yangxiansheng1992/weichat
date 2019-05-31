@@ -7,6 +7,7 @@
       <p>{{ fullName }}</p>
       <p>{{ obj.a }}</p>
     </div>
+    <p class="title">下面是聊天列表</p>
     <div class="chat-room">
       <chat-item :data="item" v-for="item in chatList" :key="item.title" />
     </div>
@@ -17,6 +18,7 @@ import mockApi from '../../mockService/mockApi';
 import ChatItem from './chat-item/index';
 
 export default {
+  name: 'chat',
   components: {
     ChatItem,
   },

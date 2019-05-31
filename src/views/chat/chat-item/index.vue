@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-item" :style="style">
+  <div class="chat-item" :style="style" @click="toChatroom">
     <div class="img-box">
       <img :src="data.img" alt="" />
     </div>
@@ -23,6 +23,16 @@ export default {
       return { backgroundImage: this.data.img };
     },
   },
+  methods: {
+    toChatroom () {
+      this.$router.push({
+        name: 'chatroom',
+        params: {
+          chatItemData: this.data,
+        }
+      })
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -35,7 +45,7 @@ export default {
   border-bottom: $border_color;
   display: flex;
   flex-direction: row;
-  background-color: aliceblue;
+  margin-bottom: px2rem(4px);
   .img-box {
     width: px2rem(50px);
     height: 100%;
@@ -47,8 +57,9 @@ export default {
     }
   }
   .text-box {
-    height: calc(100%-px2rem(60px));
+    flex: 1;
     margin-left: px2rem(10px);
+    border-bottom: 1px solid $border_color;
     p {
       height: 70%;
       font-size: px2rem(16px);

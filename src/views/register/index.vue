@@ -70,6 +70,7 @@
 
 <script>
 export default {
+  name: 'register',
   data () {
     return {
       username: { value: '', state: '' },

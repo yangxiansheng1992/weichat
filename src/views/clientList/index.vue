@@ -4,6 +4,12 @@
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  name: 'clientList',
+}
+</script>
+
 
 <style lang="scss" scoped>
 .clientList {

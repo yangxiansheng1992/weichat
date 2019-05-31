@@ -32,6 +32,13 @@ $height:px2rem(30px);
       color: red;
     }
   }
+  .title{
+    width: $percent;
+    height: px2rem(30px);
+    background-color: antiquewhite;
+    text-align: center;
+    line-height: px2rem(30px);
+  }
   .chat-room{
     width: $percent;
   }
