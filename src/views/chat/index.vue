@@ -9,7 +9,11 @@
     </div>
     <p class="title">下面是聊天列表</p>
     <div class="chat-room">
-      <chat-item :data="item" v-for="item in chatList" :key="item.title" />
+      <chat-item
+        :data="item"
+        v-for="(item, i) in chatList"
+        :key="item.title + i"
+      />
     </div>
   </div>
 </template>
@@ -30,7 +34,9 @@ export default {
       obj: {
         a: 123
       },
-      chatList: [],
+      chatList: [
+
+      ],
     }
   },
   created () {

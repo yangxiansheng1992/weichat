@@ -11,7 +11,11 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "axios": "^0.18.0",
+    "better-scroll": "^1.15.2",
     "core-js": "^2.6.5",
     "mint-ui": "^2.2.13",
     "mockjs": "^1.0.1-beta3",

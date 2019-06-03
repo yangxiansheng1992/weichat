@@ -4,8 +4,8 @@ $height:px2rem(30px);
 .chat{
   width: $percent;
   height: $percent;
-  padding: 50px 0 0;
-  overflow: auto;
+  // padding: 50px 0 0;
+  overflow-y:scroll;
   h1{
     width: $percent;
     height: $height;

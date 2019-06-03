@@ -13,6 +13,6 @@ export default {
 
 <style lang="scss" scoped>
 .me {
-  padding: 50px 0 0;
+  // padding: 50px 0 0;
 }
 </style>

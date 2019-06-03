@@ -1,7 +1,7 @@
 <template>
   <div class="tab">
-    <router-link tag="div" class="tab-item" to="/chat">
-      <div class="tab-link tab-link-1">
+    <!-- <router-link tag="div" class="tab-item" to="/chat">
+      <div class="tab-link tab-link-1" @click="setTitle">
         <span class="tab-link-text">微信</span>
       </div>
     </router-link>
@@ -19,26 +19,87 @@
       <div class="tab-link tab-link-4">
         <span class="tab-link-text">我</span>
       </div>
+    </router-link> -->
+
+    <router-link
+      v-for="item in tabList"
+      tag="div"
+      class="tab-item"
+      :key="item.title"
+      :routerLinkActive="item.linkClass"
+      :to="item.name"
+    >
+      <div class="tab-link" :class="item.linkClass" @click="setTitle(item)">
+        <span class="tab-link-text">我</span>
+      </div>
     </router-link>
   </div>
 </template>
 <script>
 export default {
-
+  data () {
+    return {
+      tabList: [
+        {
+          title: '微信',
+          name: "/chat",
+          linkClass: 'tab-link-1',
+          iconType: 'plus',
+          bgColor: '#1e2b39',
+          iconColor: '#fffffb',
+        },
+        {
+          title: '通讯录',
+          name: "/clientList",
+          linkClass: 'tab-link-2',
+          iconType: 'plus',
+          bgColor: '#1e2b39',
+          iconColor: '#fffffb',
+        },
+        {
+          title: '发现',
+          name: "/find",
+          linkClass: 'tab-link-3',
+          iconType: 'plus',
+          bgColor: '#1e2b39',
+          iconColor: '#fffffb',
+        },
+        {
+          title: '我',
+          name: "/me",
+          linkClass: 'tab-link-4',
+          iconType: 'camera',
+          bgColor: '#fffffb',
+          iconColor: '#1e2b39',
+        },
+      ]
+    }
+  },
+  methods: {
+    setTitle (data) {
+      this.$parent.$data.title = data.title;
+      this.$parent.$data.iconType = data.iconType;
+      this.$parent.$data.bgColor = data.bgColor;
+      this.$parent.$data.iconColor = data.iconColor;
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
+@import "../../styles/compass.scss";
+@import "../../styles/color.scss";
 .tab {
   border-top: 1px solid rgba(153, 153, 153, 0.4);
   display: flex;
-  position: fixed;
-  height: 50px;
+  flex-direction: row;
+  width: 100%;
+  height: px2rem(50px);
   line-height: 44px;
   font-size: 14px;
+  background-color: $white;
+  position: fixed;
   bottom: 0px;
   left: 0;
-  right: 0;
-  background-color: #fff;
 }
 
 .tab-item {

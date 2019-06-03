@@ -9,6 +9,7 @@ import Me from './views/me';
 import Register from './views/register';
 import Login from './views/login';
 import Chatroom from './views/chatroom/index.vue';
+import UserSet from './views/chatroom/user-set/index.vue';
 
 
 Vue.use(Router)
@@ -61,6 +62,11 @@ export default new Router({
       path: '/chatroom',
       name: 'chatroom',
       component: Chatroom,
-    }
+    },
+    {
+      path: '/user-set',
+      name: 'user-set',
+      component: UserSet,
+    },
   ]
 })

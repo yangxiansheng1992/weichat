@@ -6,6 +6,7 @@ import router from './router';
 import store from './vuex/store';
 import './registerServiceWorker';
 import './common/style.css';
+import './common/font-awesome';
 import './mockService/mockData';
 
 Vue.config.productionTip = false;
