@@ -18,8 +18,8 @@
   </div>
 </template>
 <script>
-import mockApi from '../../mockService/mockApi';
-import ChatItem from './chat-item/index';
+import mockApi from '@/mockService/mockApi';
+import ChatItem from './common/chat-item/index';
 
 export default {
   name: 'chat',
@@ -104,6 +104,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/compass.scss";
+@import "@/styles/compass.scss";
 @import "./index.scss";
 </style>

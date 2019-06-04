@@ -1,0 +1,45 @@
+@import "@/styles/color.scss";
+@import "@/styles/compass.scss";
+.chat-item {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  .chat-msg {
+    width: 80%;
+    position: relative;
+    .time {
+      width: 100%;
+      height: px2rem(20px);
+      text-indent: 1rem;
+    }
+    .msg {
+      position: absolute;
+      top: px2rem(20px);
+      max-width: 80%;
+      min-width: 10%;
+      min-height: px2rem(20px);
+      padding: px2rem(5px) 3%;
+      background-color: $chatroom_msg_bg;
+      word-wrap: break-word;
+      word-break: break-all;
+      border-radius: px2rem(3px);
+    }
+  }
+  .chat-user {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .img-box {
+      margin-top: px2rem(10px);
+      width: px2rem(40px);
+      height: px2rem(40px);
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

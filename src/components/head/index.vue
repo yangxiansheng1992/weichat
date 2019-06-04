@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/compass.scss";
+@import "@/styles/compass.scss";
 
 .app-header {
   position: fixed;

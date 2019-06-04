@@ -37,3 +37,16 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## mockjs
+用于模拟数据请求；
+
+## better-scroll
+用于优化滚动条
+
+## fortawesome
+字体图表库
+
+## dayjs
+一款用于时间的轻量级库

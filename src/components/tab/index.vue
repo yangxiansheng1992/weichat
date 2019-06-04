@@ -86,8 +86,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "../../styles/compass.scss";
-@import "../../styles/color.scss";
+@import "@/styles/compass.scss";
+@import "@/styles/color.scss";
 .tab {
   border-top: 1px solid rgba(153, 153, 153, 0.4);
   display: flex;

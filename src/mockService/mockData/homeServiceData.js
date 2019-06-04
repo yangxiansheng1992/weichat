@@ -4,19 +4,22 @@ import mockApiUrl from '../mock-config';
 Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
   'data': [
     {
-      title: 'lol开黑',
+      title: 'lol开黑（聊天）',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
+      id:'chat',
     },
     {
-      title: '菜鸟互琢',
+      title: '菜鸟互琢（视频）',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
+      id:'video',
     },
     {
-      title: '吹水群',
+      title: '有趣的控制台',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
+      id:'fun',
     },
   ],
 });

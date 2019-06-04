@@ -8,8 +8,10 @@ import './registerServiceWorker';
 import './common/style.css';
 import './common/font-awesome';
 import './mockService/mockData';
+import dayjs from 'dayjs';
 
 Vue.config.productionTip = false;
+Vue.prototype.$day = dayjs;
 Vue.use(MintUI);
 
 new Vue({

@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import Head from '../../../components/head/index';
+import Head from '@/components/head/index';
 export default {
   name: 'user-set',
   components: {
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "../../../styles/compass.scss";
+@import "@/styles/compass.scss";
 .user {
   width: 100%;
   height: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-item" :style="style" @click="toChatroom">
+  <div class="chat-item" :style="style" @click="direction(data.id)">
     <div class="img-box">
       <img :src="data.img" alt="" />
     </div>
@@ -24,9 +24,22 @@ export default {
     },
   },
   methods: {
-    toChatroom () {
+    direction (id) {
+      switch (id) {
+        case 'chat':
+          this.goWhere('chatroom');
+          break;
+        case 'video':
+          this.goWhere('video');
+          break;
+        case 'fun':
+          this.goWhere('fun');
+          break;
+      }
+    },
+    goWhere (name) {
       this.$router.push({
-        name: 'chatroom',
+        name,
         params: {
           chatItemData: this.data,
         }
