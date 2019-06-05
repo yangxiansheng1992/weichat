@@ -25,13 +25,16 @@
         >
       </div>
       <div class="footer">
-        <a class="hint" @click="redirect('/register')">没有帐号？立即注册</a>
+        <a class="hint" @click="goWhere('/register')">没有帐号？立即注册</a>
       </div>
     </section>
   </transition>
 </template>
 
 <script>
+import { deleteBlank, showToast } from '../../config/tool';
+import UserStorage from '../../storage/user';
+
 export default {
   name: 'login',
   data () {
@@ -41,11 +44,14 @@ export default {
     };
   },
   methods: {
-    redirect (path) {
+    goWhere (path) {
       this.$router.push(path);
     },
     login () {
-
+      UserStorage.setUserInfo({
+        user_id: this.username
+      })
+      this.goWhere('/chat');
     },
   },
 };

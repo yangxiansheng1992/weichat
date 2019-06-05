@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+import RYtool from './rongcloud/ryTool';
 export default {
   name: 'App',
   data () {
@@ -11,6 +12,12 @@ export default {
       isLogged: true,
     }
   },
+  created () {
+    RYtool.rongCloudStart();
+  },
+  methods: {
+
+  }
 };
 </script>
 

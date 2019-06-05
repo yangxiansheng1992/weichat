@@ -3,7 +3,11 @@
     <Head :title="userData.title" :isSearchShow="isSearchShow"></Head>
     <main>
       <scroll class="scroll">
-        <div class="wrapper"></div>
+        <div class="wrapper">
+          <div class="iframe-box">
+            <Iframe-animate animateType="canvas" />
+          </div>
+        </div>
       </scroll>
     </main>
     <footer></footer>
@@ -12,12 +16,14 @@
 <script>
 import Head from '@/components/head';
 import Scroll from '@/components/scroll';
+import IframeAnimate from '../../../components/iframe/iframeAnimate';
 
 export default {
   name: 'chatroom',
   components: {
     Head,
     Scroll,
+    IframeAnimate
   },
   computed: {
     userData () {

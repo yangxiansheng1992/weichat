@@ -30,7 +30,7 @@
       :to="item.name"
     >
       <div class="tab-link" :class="item.linkClass" @click="setTitle(item)">
-        <span class="tab-link-text">我</span>
+        <span class="tab-link-text">{{ item.title }}</span>
       </div>
     </router-link>
   </div>

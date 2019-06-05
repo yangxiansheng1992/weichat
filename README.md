@@ -50,3 +50,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## dayjs
 一款用于时间的轻量级库
+
+## js-cookie 一款封装cookie的方法
+https://github.com/js-cookie/js-cookie

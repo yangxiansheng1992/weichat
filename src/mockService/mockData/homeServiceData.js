@@ -7,19 +7,19 @@ Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
       title: 'lol开黑（聊天）',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
-      id:'chat',
+      id: 'chatroom',
     },
     {
       title: '菜鸟互琢（视频）',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
-      id:'video',
+      id: 'video',
     },
     {
       title: '有趣的控制台',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
-      id:'fun',
+      id: 'fun',
     },
   ],
 });

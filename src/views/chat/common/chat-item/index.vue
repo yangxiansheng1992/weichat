@@ -25,26 +25,13 @@ export default {
   },
   methods: {
     direction (id) {
-      switch (id) {
-        case 'chat':
-          this.goWhere('chatroom');
-          break;
-        case 'video':
-          this.goWhere('video');
-          break;
-        case 'fun':
-          this.goWhere('fun');
-          break;
-      }
-    },
-    goWhere (name) {
       this.$router.push({
-        name,
+        name: id,
         params: {
           chatItemData: this.data,
         }
       })
-    }
+    },
   }
 };
 </script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="evanyou" width="1302" height="678"
+    style="position: fixed;width: 100%;height: 100%;top: 0;left:0;z-index:-1;"></canvas>
+
+  <script type="text/javascript" src="./jquery.js"></script>
+  <script type="text/javascript" src="./clicklove.js"></script>
+  <script>
+
+    //背景随机
+
+    var Y, O, E, L, B, C, T, z, N, S, A, I;
+    !function () {
+      var e = function () {
+        for (O.clearRect(0, 0, L, B), T = [{
+          x: 0,
+          y: .7 * B + C
+        }, {
+          x: 0,
+          y: .7 * B - C
+        }]; T[1].x < L + C;) t(T[0], T[1])
+      }, t = function (e, t) {
+        O.beginPath(), O.moveTo(e.x, e.y), O.lineTo(t.x, t.y);
+        var n = t.x + (2 * I() - .25) * C,
+          r = a(t.y);
+        O.lineTo(n, r), O.closePath(), N -= S / -50, O.fillStyle = "#" + (127 * A(N) + 128 << 16 | 127 * A(N + S / 3) + 128 << 8 | 127 * A(N + S / 3 * 2) + 128).toString(16), O.fill(), T[0] = T[1], T[1] = {
+          x: n,
+          y: r
+        }
+      }, a = function n(e) {
+        var t = e + (2 * I() - 1.1) * C;
+        return t > B || t < 0 ? n(e) : t
+      };
+      Y = document.getElementById("evanyou"), O = Y.getContext("2d"), E = window.devicePixelRatio || 1, L = window.innerWidth, B = window.innerHeight, C = 90, z = Math, N = 0, S = 2 * z.PI, A = z.cos, I = z.random, Y.width = L * E, Y.height = B * E, O.scale(E, E), O.globalAlpha = .6, document.onclick = e, document.ontouchstart = e, e()
+    }()
+
+
+    $("#toc-eye").click(function () {
+      $("#toc.toc-article").toggle(1000);
+    });
+  </script>
+</body>
+
+</html>

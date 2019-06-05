@@ -22,6 +22,10 @@
       .wrapper{
         width: 100%;
         margin-bottom: px2rem(50px);
+        .iframe-box{
+          width: 100%;
+          height: px2rem(200px);
+        }
       }
     }
   }
