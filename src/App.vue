@@ -13,7 +13,7 @@ export default {
     }
   },
   created () {
-    RYtool.rongCloudStart();
+    // RYtool.rongCloudStart();
   },
   methods: {
 

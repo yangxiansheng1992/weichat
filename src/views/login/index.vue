@@ -32,8 +32,9 @@
 </template>
 
 <script>
-import { deleteBlank, showToast } from '../../config/tool';
+// import { deleteBlank, showToast } from '../../config/tool';
 import UserStorage from '../../storage/user';
+import RYtool from '../../rongcloud/ryTool';
 
 export default {
   name: 'login',
@@ -52,6 +53,7 @@ export default {
         user_id: this.username
       })
       this.goWhere('/chat');
+      // RYtool.rongCloudStart();
     },
   },
 };

@@ -7,7 +7,7 @@
       <p>{{ fullName }}</p>
       <p>{{ obj.a }}</p>
     </div>
-    <p class="title">下面是聊天列表</p>
+    <p class="title">下面是功能列表</p>
     <div class="chat-room">
       <chat-item
         :data="item"
@@ -96,6 +96,7 @@ export default {
           this.chatList = [...data.data];
         })
         .catch((err) => {
+          console.log(err);
           // showToast(err);
         });
     },

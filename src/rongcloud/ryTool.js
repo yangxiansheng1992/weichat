@@ -1,7 +1,8 @@
 import Api from '../config/Api';
 import RYurl from '../config/RY-config'
 import rongCloud from './rong-yun';
-import store from 'vuex'
+import store from 'vuex';
+import UserStorage from '../storage/user';
 
 export default class RYtool {
   /**
@@ -9,12 +10,14 @@ export default class RYtool {
    * @param {用户名} user_id 
    * @param {用户头像} avatar 
    */
-  static rongCloudStart (user_id) {
+  static rongCloudStart () {
+    const { user_id } = UserStorage.getUserInfo();
     Api.getRongCloudToken({
       userId: user_id,
       name: user_id,
-      portraitUri: RYurl.avatar,
+      portraitUrl: RYurl.avatar,
     }).then((res) => {
+      console.log(res);
       const { token, userId } = res;
       store.commit('setRongCloudToken', token);
       this.connectRongCloud(token, userId);

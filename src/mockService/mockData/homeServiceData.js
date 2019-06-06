@@ -10,16 +10,28 @@ Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
       id: 'chatroom',
     },
     {
-      title: '菜鸟互琢（视频）',
+      title: '电影院',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
-      id: 'video',
+      id: 'video-page',
     },
     {
-      title: '有趣的控制台',
+      title: '音乐库',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
-      id: 'fun',
+      id: 'audio-page',
+    },
+    {
+      title: '动画吧',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'animation-page',
+    },
+    {
+      title: '有趣的',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'interest',
     },
   ],
 });

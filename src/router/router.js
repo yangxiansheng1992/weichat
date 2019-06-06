@@ -2,8 +2,11 @@ import Main from '@/views/main.vue';
 // import Chat from '@/views/chat';
 import Chatroom from '@/views/chat/chatroom/index.vue';
 import UserSet from '@/views/chat/chatroom/user-set/index.vue';
-import Fun from '@/views/chat/fun/index.vue';
-import Video from '@/views/chat/video/index.vue';
+import Interest from '@/views/chat/interest/index.vue';
+import VideoPage from '@/views/chat/video-page/index.vue';
+import AudioPage from '@/views/chat/audio-page/index.vue';
+import AnimationPage from '@/views/chat/animation-page/index.vue';
+
 // import ClientList from '@/views/clientList';
 // import Find from '@/views/find';
 // import Guide from '@/views/guide';
@@ -92,19 +95,35 @@ export default [
     component: UserSet,
   },
   {
-    path: '/video',
-    name: 'video',
+    path: '/video-page',
+    name: 'video-page',
     meta: {
       title: '电影院',
     },
-    component: Video,
+    component: VideoPage,
   },
   {
-    path: '/fun',
-    name: 'fun',
+    path: '/audio-page',
+    name: 'audio-page',
+    meta: {
+      title: '音乐库',
+    },
+    component: AudioPage,
+  },
+  {
+    path: '/animation-page',
+    name: 'animation-page',
+    meta: {
+      title: '动画吧',
+    },
+    component: AnimationPage,
+  },
+  {
+    path: '/interest',
+    name: 'interest',
     meta: {
       title: '有趣集合',
     },
-    component: Fun,
+    component: Interest,
   },
 ];

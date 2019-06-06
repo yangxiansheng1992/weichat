@@ -14,7 +14,7 @@ import Head from '@/components/head';
 import Scroll from '@/components/scroll';
 
 export default {
-  name: 'chatroom',
+  name: 'interest',
   components: {
     Head,
     Scroll,
