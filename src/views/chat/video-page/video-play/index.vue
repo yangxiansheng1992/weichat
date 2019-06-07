@@ -39,39 +39,48 @@ export default {
     //开始播放事件
     onPlayerPlay (e) {
       console.log(e);
+      console.log('开始播放');
     },
     //暂停事件
     onPlayerPause (e) {
       console.log(e);
+      console.log('暂停');
     },
     //播放结束事件
     onPlayerEnded (e) {
       console.log(e);
+      console.log('播放暂停');
     },
     //等待事件
     onPlayerWaiting (e) {
       console.log(e);
+      console.log('缓存等待');
     },
     onPlayerPlaying (e) {
       console.log(e);
     },
     onPlayerLoadeddata (e) {
       console.log(e);
+      console.log('加载数据');
     },
     onPlayerTimeupdate (e) {
       console.log(e);
+      console.log('等待数据');
     },
     onPlayerCanplay (e) {
       console.log(e);
+      console.log('可以播放');
     },
     onPlayerCanplaythrough (e) {
       console.log(e);
+      console.log('可以通过');
     },
     playerStateChanged (e) {
       console.log(e);
+      console.log('状态改变');
     },
     playerReadied () {
-
+      console.log('播放前，准备好了')
     }
   }
 }

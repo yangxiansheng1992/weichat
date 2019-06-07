@@ -4,9 +4,10 @@
     <main>
       <scroll class="scroll">
         <div class="wrapper">
-          <div class="iframe-box">
+          <!-- <div class="iframe-box">
             <Video-player :playerOptions="playerOptions" />
-          </div>
+          </div> -->
+          <video-player-box :playerOptions="playerOptions" />
         </div>
       </scroll>
     </main>
@@ -16,14 +17,14 @@
 <script>
 import Head from '@/components/head';
 import Scroll from '@/components/scroll';
-import VideoPlayer from './video-play/index';
+import VideoPlayerBox from '../common/video-player-box';
 
 export default {
   name: 'video-page',
   components: {
     Head,
     Scroll,
-    VideoPlayer,
+    VideoPlayerBox,
   },
   computed: {
     userData () {
