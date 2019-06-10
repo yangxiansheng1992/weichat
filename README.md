@@ -80,4 +80,14 @@ npm install - save - dev http - proxy - middleware
 ### vue-video-player;
 适用于 Vue 的 video.js 播放器组件:https://github.com/surmon-china/vue-video-player
 npm install vue-video-player --save
-
+@play="onPlayerPlay($event)"
+        @pause="onPlayerPause($event)"
+        @ended="onPlayerEnded($event)"
+        @waiting="onPlayerWaiting($event)"
+        @playing="onPlayerPlaying($event)"
+        @loadeddata="onPlayerLoadeddata($event)"
+        @timeupdate="onPlayerTimeupdate($event)"
+        @canplay="onPlayerCanplay($event)"
+        @canplaythrough="onPlayerCanplaythrough($event)"
+        @statechanged="playerStateChanged($event)"
+        @ready="playerReadied"

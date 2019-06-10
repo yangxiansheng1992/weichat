@@ -13,25 +13,5 @@
     width: 100%;
     @include prefixer-value(height, calc(100% - 3.125rem), webkit moz o ms);
     padding-top: px2rem(50px);
-    .scroll {
-      width: 100%;
-      @include prefixer-value(height, calc(100% - 3.125rem), webkit moz o ms);
-      @include prefixer(overflow-scrolling, touch, webkit moz o ms);
-      @include prefixer(scroll-behavior, smooth, webkit moz o ms);
-      overflow: auto;
-      .wrapper{
-        width: 100%;
-        // padding-bottom: px2rem(50px);
-      }
-    }
-  }
-  footer {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
