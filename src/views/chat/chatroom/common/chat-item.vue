@@ -6,6 +6,7 @@
 </template>
 <script>
 import MyChat from './my-chat';
+import UserStorage from '@/storage/user';
 import FriendCaht from './friend-chat';
 
 export default {
@@ -13,6 +14,11 @@ export default {
     data: {
       type: Object,
       required: true,
+    }
+  },
+  computed: {
+    userId () {
+      return UserStorage.getUserInfo().user_id
     }
   },
   components: {

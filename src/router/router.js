@@ -2,7 +2,7 @@ import Main from '@/views/main.vue';
 // import Chat from '@/views/chat';
 import Chatroom from '@/views/chat/chatroom/index.vue';
 import UserSet from '@/views/chat/chatroom/user-set/index.vue';
-import Interest from '@/views/chat/interest/index.vue';
+import Amap from '@/views/chat/amap/index.vue';
 import VideoPage from '@/views/chat/video-page/index.vue';
 import AudioPage from '@/views/chat/audio-page/index.vue';
 import AnimationPage from '@/views/chat/animation-page/index.vue';
@@ -119,11 +119,11 @@ export default [
     component: AnimationPage,
   },
   {
-    path: '/interest',
-    name: 'interest',
+    path: '/amap',
+    name: 'amap',
     meta: {
-      title: '有趣集合',
+      title: '高德地图',
     },
-    component: Interest,
+    component: Amap,
   },
 ];

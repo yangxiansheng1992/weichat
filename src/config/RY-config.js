@@ -4,8 +4,8 @@ export default class RYurl {
   static appKey = 'x18ywvqfxczhc';
 
   static AppSecret = '7XbvINhe82';;
-  // 获取用户token；
-  static RongCloudTokenUrl = 'http://api-cn.ronghub.com/user/getToken.json';
+
+  static RongCloudTokenUrl = 'http://192.168.56.1:1990/user/token';
 
   static avatar = 'https://www.bs7010.com//images/avatar/default.jpg';
 }

@@ -91,3 +91,7 @@ npm install vue-video-player --save
         @canplaythrough="onPlayerCanplaythrough($event)"
         @statechanged="playerStateChanged($event)"
         @ready="playerReadied"
+
+### vue-amap
+vue-amap 能够抛开高德原生 SDK 覆盖大多数场景：https://elemefe.github.io/vue-amap/#/zh-cn/introduction/install
+npm install vue-amap --save

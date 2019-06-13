@@ -28,10 +28,21 @@ Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
       id: 'animation-page',
     },
     {
-      title: '有趣的',
+      title: '高德地图',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
-      id: 'interest',
+      id: 'amap',
+    },
+  ],
+});
+
+Mock.mock(`${mockApiUrl.getToken}`, 'get', {
+  'data': [
+    {
+      title: 'lol开黑（聊天）',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'chatroom',
     },
   ],
 });

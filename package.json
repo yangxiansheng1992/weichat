@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "node build/api-server.js",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -25,6 +25,7 @@
     "register-service-worker": "^1.6.2",
     "sha1": "^1.1.1",
     "vue": "^2.6.10",
+    "vue-amap": "^0.5.9",
     "vue-router": "^3.0.3",
     "vue-video-player": "^5.0.2",
     "vuex": "^3.0.1"

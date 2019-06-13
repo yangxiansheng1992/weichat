@@ -96,6 +96,8 @@ export default {
     },
     //自定义切换视频
     chageVideo (index) {
+      //切回播放按钮
+      this.trigger = false;
       this.optionNumber += index;
       if (this.optionNumber >= this.$parent.$data.videoList.length - 1) {
         this.optionNumber = this.$parent.$data.videoList.length - 1;

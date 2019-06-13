@@ -28,9 +28,14 @@
 </template>
 <script>
 import Head from '@/components/head';
+import { mapState } from 'vuex';
+import UserStorage from '@/storage/user';
 import ChatItem from './common/chat-item';
 import { toolkit, showToast } from '@/config/tool';
 import Scroll from '@/components/scroll';
+import RYtool from '@/rongcloud/ryTool';
+
+const avatar = 'https://www.bs7010.com//images/avatar/default.jpg';
 
 export default {
   name: 'chatroom',
@@ -42,33 +47,20 @@ export default {
   computed: {
     userData () {
       return { ...this.$route.params.chatItemData };
-    }
+    },
+    ...mapState({
+      chatList: state => state.chatList,
+      rcConnectStatus: state => state.rcConnectStatus,
+    }),
   },
   data () {
     return {
       isSearchShow: false,
-      chatList: [
-        {
-          img: require('../../../assets/images/find/bg.png'),
-          time: '123123',
-          msg: '我在叫你',
-          msgType: 'my',
-        },
-        {
-          img: require('../../../assets/images/find/bg.png'),
-          time: '17654',
-          msg: '我在回答你',
-          msgType: 'friend',
-        },
-        {
-          img: require('../../../assets/images/find/bg.png'),
-          time: '1231234223',
-          msg: '你回答了吗',
-          msgType: 'my',
-        },
-      ],
       userText: '',
     }
+  },
+  beforeRouteEnter (to, from, next) {
+    next(vm => vm.joinChatRoom());
   },
   methods: {
     toUserSet () {
@@ -83,13 +75,16 @@ export default {
       if (toolkit.deleteBlank(this.userText)) {
         showToast('内容不能为空')
       } else {
-        this.chatList.push({
-          img: require('../../../assets/images/find/bg.png'),
-          time: this.$day().format("HH:mm:ss"),
-          msg: this.userText,
-          msgType: 'my',
-          target: 'thomas'
-        })
+        const { user_id } = UserStorage.getUserInfo();
+        this.sendPersonMessage('my', this.userText, user_id);
+
+        // this.chatList.push({
+        //   img: require('../../../assets/images/find/bg.png'),
+        //   time: this.$day().format("HH:mm:ss"),
+        //   msg: this.userText,
+        //   msgType: 'my',
+        //   target: 'thomas'
+        // })
         this.scrollEnd();
         this.userText = '';
       }
@@ -101,7 +96,35 @@ export default {
         var last = list[list.length - 1];
         last.scrollIntoView();
       }
-    }
+    },
+    //发送消息
+    sendPersonMessage (msgType, msg, sentUser) {
+      RYtool.sendPersonMessage({
+        targetId: 'chatroom',
+        content: {
+          msgType,
+          msg,
+          avatar: avatar,
+          sentUser,
+        },
+        success: () => {
+          console.log('发送成功获取消息列表')
+          console.log(this.chatList);
+          showToast('发送成功');
+        },
+      });
+    },
+    //加入聊天室
+    joinChatRoom () {
+      if (this.rcConnectStatus) {
+        RYtool.joinChatRoom({
+          chatRoomId: 'chatroom',
+          success: () => {
+            showToast(`欢迎来到《lol开黑群》,勇往直前，冲啊!\n`);
+          },
+        });
+      }
+    },
   }
 }
 </script>

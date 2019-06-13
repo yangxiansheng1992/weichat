@@ -17,7 +17,7 @@ export default new Vuex.Store({
       state.rcConnectStatus = bool
     },
     addChatList (state, chatDetail) {
-      state.addChatList.push(chatDetail);
+      state.chatList.push(chatDetail);
     }
   },
   actions: {

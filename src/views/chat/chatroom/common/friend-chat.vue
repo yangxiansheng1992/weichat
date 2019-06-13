@@ -2,11 +2,11 @@
   <div class="chat-item">
     <div class="chat-user">
       <div class="img-box">
-        <img :src="data.img" alt="" />
+        <img :src="data.avatar" alt="" />
       </div>
     </div>
     <div class="chat-msg">
-      <p class="time">{{ data.time }}</p>
+      <p class="time">{{ data.sentUser }}</p>
       <div class="msg">
         {{ data.msg }}
       </div>

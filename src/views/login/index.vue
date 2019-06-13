@@ -53,7 +53,7 @@ export default {
         user_id: this.username
       })
       this.goWhere('/chat');
-      // RYtool.rongCloudStart();
+      RYtool.rongCloudStart();
     },
   },
 };
