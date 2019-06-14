@@ -1,0 +1,351 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylespreloader.css" type="text/css" media="screen, print" />
+  <script src="js/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div id="status" class="status statuslogo">&nbsp;</div>
+  </div>
+  <div class="container">
+    <div class="header">
+      <!-- <audio id="sound" autoplay="autoplay"></audio> -->
+      <div class="logo" id="hlogo"><img src="images/logo-pk10.png" alt="" /></div>
+      <div class="position">
+        <div class="positm" id="pos1"></div>
+        <div class="positm" id="pos2"></div>
+        <div class="positm" id="pos3"></div>
+        <div class="positm" id="pos4"></div>
+        <div class="positm" id="pos5"></div>
+        <div class="positm" id="pos6"></div>
+        <div class="positm" id="pos7"></div>
+        <div class="positm" id="pos8"></div>
+        <div class="positm" id="pos9"></div>
+        <div class="positm" id="pos10"></div>
+      </div>
+      <div class="currentdraw">
+        <p>期数:</p>
+        <p id="currentdrawid"></p>
+      </div>
+    </div>
+    <div class="scenary page1">
+      <div class="scenaryitm" id="scenaryitm">
+        <img src="images/scenery.jpg" width="2668" height="119" alt="" />
+      </div>
+    </div>
+    <div class="road page1">
+      <div class="roadani">
+        <div class="roaditm" id="roaditm">
+          <img src="images/road.jpg" width="2660" height="520" alt="" />
+        </div>
+      </div>
+      <div class="roadstart" id="roadstart"><img src="images/finisher.png" width="249" height="515" alt="" />
+
+      </div>
+      <div class="car1" id="car1"><img src="images/car1.png" width="160" height="44" alt="" />
+        <div class="wheel1a">
+          <img src="images/wheel.gif" width="20" height="20" alt="" />
+        </div>
+        <div class="wheel1b">
+          <img src="images/wheel.gif" width="20" height="20" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="144" height="53" alt="" />
+        </div>
+        <div class="flame" style="right: -45px; bottom: 5px;">
+          <img src="images/flame.png" width="49" height="11" alt="" />
+        </div>
+      </div>
+      <div class="car2" id="car2"><img src="images/car2.png" width="164" height="44" alt="" />
+        <div class="wheel2a">
+          <img src="images/wheel.gif" width="20" height="20" alt="" />
+        </div>
+        <div class="wheel2b">
+          <img src="images/wheel.gif" width="20" height="20" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="154" height="51" alt="" />
+        </div>
+        <div class="flame" style="right: -45px; bottom: 5px;">
+          <img src="images/flame.png" width="49" height="11" alt="" />
+        </div>
+      </div>
+      <div class="car3" id="car3"><img src="images/car3.png" width="170" height="47" alt="" />
+        <div class="wheel3a">
+          <img src="images/wheel.gif" width="20" height="20" alt="" />
+        </div>
+        <div class="wheel3b">
+          <img src="images/wheel.gif" width="20" height="20" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="162" height="55" alt="" />
+        </div>
+        <div class="flame" style="right: -45px; bottom: 5px;">
+          <img src="images/flame.png" width="51" height="12" alt="" />
+        </div>
+
+      </div>
+      <div class="car4" id="car4"><img src="images/car4.png" width="173" height="47" alt="" />
+        <div class="wheel4a">
+          <img src="images/wheel.gif" width="21" height="21" alt="" />
+        </div>
+        <div class="wheel4b">
+          <img src="images/wheel.gif" width="21" height="21" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="154" height="56" alt="" />
+        </div>
+        <div class="flame" style="right: -45px; bottom: 5px;">
+          <img src="images/flame.png" width="51" height="12" alt="" />
+        </div>
+
+      </div>
+      <div class="car5" id="car5"><img src="images/car5.png" width="190" height="50" alt="" />
+        <div class="wheel5a">
+          <img src="images/wheel.gif" width="21" height="21" alt="" />
+        </div>
+        <div class="wheel5b">
+          <img src="images/wheel.gif" width="21" height="21" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="158" height="57" alt="" />
+        </div>
+        <div class="flame" style="right: -47px; bottom: 5px;">
+          <img src="images/flame.png" width="53" height="13" alt="" />
+        </div>
+
+      </div>
+      <div class="car6" id="car6"><img src="images/car6.png" width="201" height="53" alt="" />
+        <div class="wheel6a">
+          <img src="images/wheel.gif" width="22" height="22" alt="" />
+        </div>
+        <div class="wheel6b">
+          <img src="images/wheel.gif" width="22" height="22" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="161" height="59" alt="" />
+        </div>
+        <div class="flame" style="right: -47px; bottom: 5px;">
+          <img src="images/flame.png" width="53" height="13" alt="" />
+        </div>
+      </div>
+      <div class="car7" id="car7"><img src="images/car7.png" width="210" height="59" alt="" />
+        <div class="wheel7a">
+          <img src="images/wheel.gif" width="23" height="23" alt="" />
+        </div>
+        <div class="wheel7b">
+          <img src="images/wheel.gif" width="23" height="23" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="163" height="63" alt="" />
+        </div>
+        <div class="flame" style="right: -48px; bottom: 5px;">
+          <img src="images/flame.png" width="55" height="14" alt="" />
+        </div>
+      </div>
+      <div class="car8" id="car8"><img src="images/car8.png" width="217" height="59" alt="" />
+        <div class="wheel8a">
+          <img src="images/wheel.gif" width="24" height="24" alt="" />
+        </div>
+        <div class="wheel8b">
+          <img src="images/wheel.gif" width="24" height="24" alt="" />
+        </div>
+        <div class="wind">
+          <img src="images/wind.png" width="165" height="65" alt="" />
+        </div>
+        <div class="flame" style="right: -48px; bottom: 5px;">
+          <img src="images/flame.png" width="55" height="14" alt="" />
+        </div>
+      </div>
+      <div class="car9" id="car9"><img src="images/car9.png" width="230" height="66" alt="" />
+        <div class="wheel9a">
+          <img src="images/wheel.gif" width="25" height="25" alt="" />
+        </div>
+        <div class="wheel9b">
+          <img src="images/wheel.gif" width="25" height="25" alt="" />
+        </div>
+        <div class="wind" style="left: -13px; top: -3px;">
+          <img src="images/wind.png" width="177" height="72" alt="" />
+        </div>
+        <div class="flame" style="right: -49px; bottom: 5px;">
+          <img src="images/flame.png" width="57" height="15" alt="" />
+        </div>
+      </div>
+      <div class="car10" id="car10"><img src="images/car10.png" width="241" height="66" alt="" />
+        <div class="wheel10a">
+          <img src="images/wheel.gif" width="26" height="26" alt="" />
+        </div>
+        <div class="wheel10b">
+          <img src="images/wheel.gif" width="26" height="26" alt="" />
+        </div>
+        <div class="wind" style="left: -13px; top: -3px;">
+          <img src="images/wind.png" width="177" height="72" alt="" />
+        </div>
+        <div class="flame" style="right: -49px; bottom: 5px;">
+          <img src="images/flame.png" width="58" height="16" alt="" />
+        </div>
+      </div>
+      <!-- 封盘提示 -->
+      <div id="hint">
+        <span>封盘中...</span>
+      </div>
+
+      <div class="trafficlight">
+        <div class="countdownnum"></div>
+        <div class="countdownnum2"></div>
+        <div class="redlight"><img src="images/lightred.png" width="293" height="193" alt="" /></div>
+        <div class="yellowlight"><img src="images/lightyellow.png" width="293" height="193" alt="" /></div>
+        <div class="greenlight"><img src="images/lightgreen.png" width="293" height="193" alt="" /></div>
+      </div>
+    </div>
+
+    <div class="resultpage page2">
+      <div class="resultitm result1" id="result1"><img src="images/result1.png" width="226" height="177" alt="" />
+      </div>
+      <div class="resultitm result2" id="result2"><img src="images/result2.png" width="258" height="139" alt="" />
+      </div>
+      <div class="resultitm result3" id="result3"><img src="images/result3.png" width="173" height="112" alt="" />
+      </div>
+
+      <div class="resultitm resultcar2" id="resultcar2"><img src="images/winner1.png" width="422" height="184" alt=""
+          class="resultcarimg2" /></div>
+      <div class="resultitm resultcar3" id="resultcar3"><img src="images/winner1.png" width="384" height="166" alt=""
+          class="resultcarimg3" /></div>
+      <div class="resultitm resultcar1" id="resultcar1"><img src="images/winner1.png" width="510" height="222" alt=""
+          class="resultcarimg1" /></div>
+    </div>
+
+    <div class="footer">
+      <div class="footer1">
+        <div class="footer1_1">期号:</div>
+        <div class="footer1_2">
+          <span id="nextdrawid">000000</span>
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="footer2_1">冠亚和:</div>
+        <div class="footer2_2_box">
+          <div class="footer2_2" id="stat1_1">0</div>
+          <div class="footer2_2" id="stat1_2">0</div>
+          <div class="footer2_2" id="stat1_3">0</div>
+        </div>
+      </div>
+      <div class="footer3">
+        <div class="footer2_1">龙虎:</div>
+        <div class="footer2_2_box">
+          <div class="footer2_2" id="stat2_1">0</div>
+          <div class="footer2_2" id="stat2_2">0</div>
+          <div class="footer2_2" id="stat2_3">0</div>
+          <div class="footer2_2" id="stat2_4">0</div>
+          <div class="footer2_2" id="stat2_5">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashlight">
+    </div>
+
+  </div>
+  <script src="js/jq1-10min.js"></script>
+  <script src="js/tweenMax.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/config.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+      $('#status').fadeOut();
+      $('#preloader').delay(350).fadeOut('slow');
+      $('body').delay(350).css({ 'overflow': 'visible' });
+    })
+    var pW = Math.min($("html").width(), $(window.parent).width());
+    var zoom = pW / 1334;
+    var h = zoom * 870;
+    var ty = navigator.userAgent.toLowerCase();
+    if (ty.indexOf("trident") != -1 || ty.indexOf("firefox") != -1) {
+      $("html").css({ "transform-origin": "top left", "transform": "scale(" + zoom + ")" });
+    } else {
+      $("html").css({ "zoom": zoom + "" });
+    }
+    try {
+      $("iframe", window.parent.document).width(pW);
+      $("iframe", window.parent.document).height(h);
+    } catch (e) {
+      console.log(e);
+    }
+    //=========================>
+    //根据奖号算冠军和大小；
+    function getSize(lotteryNumber) {
+      if (!lotteryNumber) {
+        return '';
+      }
+      let arr = [];
+      let resultList = lotteryNumber.split(',');
+      const first = resultList[0];
+      const second = resultList[1];
+      const sum = first * 1 + second * 1;
+      arr.push(sum);
+      const size = sum > 11 ? '大' : '小';
+      arr.push(size);
+      const oddOrEven = sum % 2 === 0 ? '双' : '单';
+      arr.push(oddOrEven);
+      return arr;
+    }
+    //根据奖号算龙虎；
+    function longHu(lotteryNumber) {
+      if (!lotteryNumber) {
+        return [];
+      }
+      let arr = [];
+      let lotteryArray = lotteryNumber.split(',');
+      let length = lotteryArray.length;
+      for (let i = 0; i <= (length - 1) / 2; i++) {
+        let front = lotteryArray[i] * 1;
+        let back = lotteryArray[length - i - 1] * 1;
+        let longOrHu = front > back ? '龙' : '虎';
+        arr.push(longOrHu);
+      }
+      return arr;
+    }
+    // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    // let data = {
+    //   marketCountDownTime: 4,//售卖时间倒计时，单位s
+    //   lockCountDownTime: 5,//封盘时间倒计时，单位s
+    //   lotteryNumber: "10,9,3,4,5,6,7,8,2,1",//中奖号码
+    //   periodicalTime: '2019050310',//奖期
+    //   periodicalNumber: '1234556',//期号
+    //   size: getSize("10,9,3,4,5,6,7,8,2,1"),//大小
+    //   longHu: longHu("10,9,3,4,5,6,7,8,2,1"),//龙虎
+    //   carMoveTime: 5000,
+    // }
+    // disposeDate(data)
+    window.addEventListener('message', (event) => {
+      const { data } = event
+      let animateData = {
+        marketCountDownTime: data.marketCountDownTime,//售卖时间倒计时，单位s
+        lockCountDownTime: data.lockCountDownTime,//封盘时间倒计时，单位s
+        lotteryNumber: data.lotteryNumber,//中奖号码
+        periodicalTime: data.periodicalTime,//奖期
+        periodicalNumber: data.periodicalNumber,//期号
+        size: getSize(data.lotteryNumber),//大小
+        longHu: longHu(data.lotteryNumber),//龙虎
+        animationDuration: data.animationDuration,//车子移动时间
+      }
+      disposeDate(animateData)
+    })
+  </script>
+
+</body>
+
+</html>

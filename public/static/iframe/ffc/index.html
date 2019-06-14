@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animateTool.css" />
+  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+  <div class="cqsscAnimate">
+    <div class="bodybg"><img src="img/cqssc/bodybg.jpg" /></div>
+    <div class="loading">
+      <div class="loadtxt">
+        LOADING...
+      </div>
+    </div>
+    <div class="content">
+      <div id="hlogo" class="nameLogo nameLogo_cq">
+        <img src="img/cqssc/logo-cqssc.png" />
+      </div>
+      <div class="coderbox">
+        <div class="codeboxl">
+          <div class="line tl">
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip bigbg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip smallbg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip bigbg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip smallbg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip bigbg"></span>
+            </div>
+          </div>
+          <div class="line ml" id="numBig">
+            <div class="box beforebg">
+              <span></span>
+            </div>
+            <div class="box beforebg">
+              <span></span>
+            </div>
+            <div class="box beforebg">
+              <span></span>
+            </div>
+            <div class="box beforebg">
+              <span></span>
+            </div>
+            <div class="box beforebg">
+              <span></span>
+            </div>
+          </div>
+          <div class="line bl">
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip singlebg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip doublebg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip doublebg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip singlebg"></span>
+            </div>
+            <div class="box perspectiveView">
+              <span class="flip afterbg out"></span>
+              <span class="flip doublebg"></span>
+            </div>
+          </div>
+        </div>
+        <div class="codeboxr">
+          <!-- 开奖信息 -->
+          <div class="heiban">
+            <!-- 本期 -->
+            <div class="line1 line-top" id="qishu">
+              <span class="hint-font">本期:</span>
+              <span class="redfont" id="preDrawIssue">2016054848</span>
+              <!-- <span class="hint-font">期</span> -->
+            </div>
+            <!-- 下期开奖时间 -->
+            <!-- <div class="line1" id="nexttime">
+              <span class="hint-font">下期开奖:</span>
+              <span class="redfont" id="drawTime">18:30:47</span>
+            </div> -->
+            <!-- 倒计时和开奖 -->
+            <div class="line1">
+              <div class="oping">
+                <div class="cuttimetitle">正在开奖...</div>
+              </div>
+              <div class="djs">
+                <span class="cuttimetitle hint-font hint-bottom" id="cuttime">倒计时：</span>
+                <span class="bluefont"></span>
+              </div>
+            </div>
+          </div>
+          <!-- 封盘中 -->
+          <div class="lock">
+            <span>封盘中...</span>
+          </div>
+          <!-- 小号显示中奖号码 -->
+          <div class="heibanb">
+            <div class="bckj">
+              <span id="sumNum">16</span><span id="sumSingleDouble">双</span><span id="sumBigSmall">小</span><span
+                id="dragonTiger">虎</span>
+            </div>
+            <div class="smallnum" id="litNum">
+              <div class="box beforebg">
+                <span></span>
+              </div>
+              <div class="box beforebg">
+                <span></span>
+              </div>
+              <div class="box beforebg">
+                <span></span>
+              </div>
+              <div class="box beforebg">
+                <span></span>
+              </div>
+              <div class="box beforebg">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menubox">
+        <!-- <div class="tyrbtn"></div> -->
+        <!-- <div id="soundbtn" class="soundbtn"></div> -->
+      </div>
+      <div class="disnone">
+        <audio autoplay="autoplay" id="bgsound" src=""></audio>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var pW = Math.min($("html").width(), $(window.parent).width());
+    var zoom = pW / 1200;
+    var h = zoom * 800;
+    var ty = navigator.userAgent.toLowerCase();
+    if (ty.indexOf("trident") != -1 || ty.indexOf("firefox") != -1) {
+      $("html").css({
+        "transform-origin": "top left",
+        "transform": "scale(" + zoom + ")"
+      });
+    } else {
+      $("html").css({
+        "zoom": zoom + ""
+      });
+    }
+    try {
+      $("iframe", window.parent.document).width(pW);
+      $("iframe", window.parent.document).height(h);
+    } catch (e) {
+
+    }
+    var lotType = "ssc";
+  </script>
+</body>
+<script src="js/victor1.0.js"></script>
+<script src="js/config.js"></script>
+<script src="js/video.js"></script>
+<script>
+  //判断总和大小
+  function getSize(sum) {
+    if (!sum) {
+      return ''
+    }
+    if (sum >= 23) {
+      return '大';
+    }
+    if (sum <= 22) {
+      return '小';
+    }
+  }
+  //获取总和
+  function getSum(lotteryNumber) {
+    if (!lotteryNumber) {
+      return '';
+    }
+    let arr = lotteryNumber.split(',');
+    var sum = 0;
+    arr.forEach(val => {
+      sum += val * 1;
+    })
+    return sum * 1;
+  }
+  //获取总和单双
+  function getSingleDouble(sum) {
+    if (!sum) {
+      return ''
+    }
+    return sum % 2 == 0 ? '双' : '单';
+  }
+  //获取龙虎
+  function getDragonTiger(lotteryNumber) {
+    if (!lotteryNumber) {
+      return '';
+    }
+    if (lotteryNumber[0] > lotteryNumber[lotteryNumber.length - 1]) {
+      return '龙'
+    }
+    if (lotteryNumber[0] < lotteryNumber[lotteryNumber.length - 1]) {
+      return '虎'
+    }
+    if (lotteryNumber[0] = lotteryNumber[lotteryNumber.length - 1]) {
+      return '和'
+    }
+  }
+  //字符串转数组
+  function splits(lotteryNumber) {
+    if (!lotteryNumber) {
+      return [];
+    }
+    return lotteryNumber.split(',');
+  }
+  //防止没有数据报错
+  function verify(str) {
+    if (!str) {
+      return '';
+    }
+    return str;
+  }
+  // let details = {
+  //   counttime: 5,//倒计时，单位秒
+  //   lockCountDownTime: 5,//封盘时间
+  //   dragonTiger: getDragonTiger('2,3,4,5,6'),//龙虎
+  //   preDrawCode: splits('2,3,4,5,6'),//中奖号码
+  //   preDrawIssue: "20190509043",//奖期
+  //   sumBigSmall: getSize(getSum('2,3,4,5,6')),//总和大小
+  //   sumNum: getSum('2,3,4,5,6'),//总和
+  //   sumSingleDouble: getSingleDouble(getSum('2,3,4,5,6')),//总和单双；
+  // }
+  // sscAnimateEnd(details)
+
+  window.addEventListener('message', (event) => {
+    const { data } = event;
+    // console.log(data);
+    let animateData = {
+      counttime: verify(data.marketCountDownTime),//倒计时，单位s
+      lockCountDownTime: verify(data.lockCountDownTime),//封盘时间倒计时，单位s
+      preDrawCode: splits(data.lotteryNumber),//中奖号码
+      preDrawIssue: verify(data.periodicalTime),//奖期
+      sumBigSmall: getSize(getSum(data.lotteryNumber)),//总和大小
+      sumNum: getSum(data.lotteryNumber),//总和
+      dragonTiger: getDragonTiger(data.lotteryNumber),//龙虎
+      sumSingleDouble: getSingleDouble(getSum(data.lotteryNumber)),//单双
+    }
+    sscAnimateEnd(animateData)
+  })
+
+</script>
+
+</html>

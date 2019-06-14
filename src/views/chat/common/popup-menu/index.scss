@@ -1,0 +1,48 @@
+/deep/.mint-popup-left {
+  height: 100%;
+}
+
+.left-menu {
+  width: 100%;
+  height: 100%;
+  color: $white;
+
+  .chatroom-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: px2rem(10px) 0;
+    .item {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 33.33333%;
+      margin-bottom: px2rem(10px);
+
+      .icon {
+        width: px2rem(55px);
+        height: px2rem(55px);
+        border: px2rem(2px) solid $hall_lottery_icon_border;
+        border-radius: px2rem(10px);
+        color: $yellow;
+        @include prefixer-value(background-image,
+        $hall_lottery_xyft_bg,
+        webkit moz o ms);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text {
+        font-size: px2rem(13px);
+        padding-top: px2rem(10px);
+      }
+    }
+  }
+}
+

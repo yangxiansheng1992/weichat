@@ -1,6 +1,11 @@
 <template>
   <div class="iframe-box">
-    <iframe :src="animateSrc" class="iframe" ref="iframe"></iframe>
+    <iframe
+      :src="animateSrc"
+      class="iframe"
+      ref="iframe"
+      @load="changeData"
+    ></iframe>
   </div>
 </template>
 <script>
@@ -29,6 +34,9 @@ export default {
     updateAnimateSrc () {
       this.animateSrc = `static/iframe/${this.animateType}/index.html`;
     },
+    changeData () {
+
+    }
   },
 };
 </script>

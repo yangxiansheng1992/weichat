@@ -27,17 +27,25 @@
       <div class="footer">
         <a class="hint" @click="goWhere('/register')">没有帐号？立即注册</a>
       </div>
+      <BackgroundAnimation
+        bgColor="255,165,0"
+        formRadian="20px"
+        bgOpacity="0.2"
+      />
     </section>
   </transition>
 </template>
 
 <script>
-// import { deleteBlank, showToast } from '../../config/tool';
+import BackgroundAnimation from '@/components/backgroundAnimation/index'
 import UserStorage from '../../storage/user';
 import RYtool from '../../rongcloud/ryTool';
 
 export default {
   name: 'login',
+  components: {
+    BackgroundAnimation,
+  },
   data () {
     return {
       username: '',
