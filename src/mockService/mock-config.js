@@ -6,4 +6,6 @@ export default class mockApiUrl {
   static chatListUrl = `${mockApiUrl.domain}/chat-list-url`
 
   static getToken = `${mockApiUrl.domain}/getToken`
+
+  static friendList = `${mockApiUrl.domain}/friendList`
 }
