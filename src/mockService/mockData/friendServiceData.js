@@ -26,12 +26,12 @@ import mockApiUrl from '../mock-config';
 
 
 Mock.mock(`${mockApiUrl.friendList}`, {
-  'list':[
+  'list': [
     {
-      "type":'a',
+      "type": 'a',
       'user|20': [{
         name: '@cname', // 中文名称
-        'id|+1':110, // 属性值自动加 1，初始值为110
+        'id|+1': 110, // 属性值自动加 1，初始值为110
         'age|18-28': 0, // 18至28以内随机整数, 0只是用来确定类型
         birthday: '@date("yyyy-MM-dd")', // 日期
         city: '@city(true)', // 中国城市
@@ -39,10 +39,10 @@ Mock.mock(`${mockApiUrl.friendList}`, {
       },],
     },
     {
-      "type":'b',
+      "type": 'b',
       'user|20': [{
         name: '@cname', // 中文名称
-        'id|+1':110, // 属性值自动加 1，初始值为110
+        'id|+1': 110, // 属性值自动加 1，初始值为110
         'age|18-28': 0, // 18至28以内随机整数, 0只是用来确定类型
         birthday: '@date("yyyy-MM-dd")', // 日期
         city: '@city(true)', // 中国城市
@@ -50,10 +50,10 @@ Mock.mock(`${mockApiUrl.friendList}`, {
       },],
     },
     {
-      "type":'c',
+      "type": 'c',
       'user|20': [{
         name: '@cname', // 中文名称
-        'id|+1':110, // 属性值自动加 1，初始值为110
+        'id|+1': 110, // 属性值自动加 1，初始值为110
         'age|18-28': 0, // 18至28以内随机整数, 0只是用来确定类型
         birthday: '@date("yyyy-MM-dd")', // 日期
         city: '@city(true)', // 中国城市
@@ -109,6 +109,15 @@ Mock.mock(`${mockApiUrl.chat}`, {
       city: '@city(true)', // 中国城市
       color: '@color', // 16进制颜色
       text: '我们一边受伤，一边行走，一边扇自己耳光，一边就地自省。有时候觉得自己像个哲学家，有时候觉得自己更像是胡言乱语的神经病，而更多时候，觉得这世界疯狂无情却不乏美丽。'
+    },
+    {
+      name: '@cname', // 中文名称
+      'id|+1': 88, // 属性值自动加 1，初始值为88
+      'age|18-28': 0, // 18至28以内随机整数, 0只是用来确定类型
+      birthday: '@date("yyyy-MM-dd")', // 日期
+      city: '@city(true)', // 中国城市
+      color: '@color', // 16进制颜色
+      text: '永远不要试图和一个傻逼讲道理，因为傻逼会把你的智商拉到和他一样的水平线上，然后用他丰富的经验打败你。'
     },
   ],
 });

@@ -31,7 +31,14 @@ export default {
       isSearchShow: false,
     }
   },
+  created () {
+    this.getYml();
+  },
   methods: {
+    getYml () {
+      // const keyboard = require('json-loader!yaml-loader!../../keyboard.yml');
+      // console.log(keyboard);
+    }
   }
 }
 </script>

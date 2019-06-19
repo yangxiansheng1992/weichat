@@ -12,6 +12,14 @@ import './mockService/mockData';
 import dayjs from 'dayjs';
 // import RYtool from './rongcloud/ryTool'
 
+import VueQuillEditor from 'vue-quill-editor'
+
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+
 Vue.use(VueAMap);
 VueAMap.initAMapApiLoader({
   key: '7d80a00c8d5506eaac8050a1bfb549e7',
@@ -23,6 +31,7 @@ VueAMap.initAMapApiLoader({
 Vue.config.productionTip = false;
 Vue.prototype.$day = dayjs;
 Vue.use(MintUI);
+Vue.use(VueQuillEditor, { placeholder: '请输入内容', });
 
 
 new Vue({

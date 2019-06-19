@@ -8,7 +8,11 @@ const express = require('express')
 const request = require('request')
 const baseUrl = 'http://api-cn.ronghub.com' //融云baseURL
 const apiServerApp = express();
+const { keyboard } = require('./tools');
 
+
+
+console.log(keyboard);
 apiServerApp.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')

@@ -26,9 +26,11 @@
     "sha1": "^1.1.1",
     "vue": "^2.6.10",
     "vue-amap": "^0.5.9",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.3",
     "vue-video-player": "^5.0.2",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "yaml-loader": "^0.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",

@@ -1,0 +1,19 @@
+game_type:
+  - name: 英雄联盟
+    type: 1
+    bet_type: *lol
+  - name: 王者荣耀
+    type: 2
+    bet_type: *wzry
+  - name: 微信
+    type: 3
+    bet_type: *wc
+  - name: 视频
+    type: 4
+    bet_type: *video
+  - name: 音乐
+    type: 5
+    bet_type: *audio
+  - name: 动画
+    type: 6
+    bet_type: *animation

@@ -17,12 +17,13 @@
       </scroll>
     </main>
     <footer>
-      <div class="input-box">
+      <quill-editor />
+      <!-- <div class="input-box">
         <input type="text" name="" id="" v-model="userText" />
       </div>
       <div class="btn" @click="sendMsg">
         <mt-button>发送</mt-button>
-      </div>
+      </div> -->
     </footer>
   </div>
 </template>
@@ -34,6 +35,7 @@ import ChatItem from './common/chat-item';
 import { toolkit, showToast } from '@/config/tool';
 import Scroll from '@/components/scroll';
 import RYtool from '@/rongcloud/ryTool';
+import QuillEditor from '../../../components/quillEditor/index';
 
 const avatar = 'https://www.bs7010.com//images/avatar/default.jpg';
 
@@ -43,6 +45,7 @@ export default {
     Head,
     ChatItem,
     Scroll,
+    QuillEditor,
   },
   computed: {
     userData () {
