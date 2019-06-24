@@ -6,10 +6,13 @@
       :isLeftShow="isLeftShow"
       :bgColor="bgColor"
     >
-      <div class="icon-box" @click="showMenu" slot="right">
+      <div class="icon-box" @click="showMenu(iconType)" slot="right">
         <font-awesome-icon :icon="iconType" :color="iconColor" />
       </div>
     </Head>
+    <div class="option">
+      <OptionAction ref="optionAction" />
+    </div>
     <main>
       <Scroll class="scroll">
         <router-view />
@@ -23,6 +26,7 @@
 import Head from '../components/head/index';
 import Scroll from '../components/scroll';
 import TabList from '../components/tab/index';
+import OptionAction from '@/components/option-action/index';
 
 export default {
   name: 'App',
@@ -30,6 +34,7 @@ export default {
     Head,
     Scroll,
     TabList,
+    OptionAction
   },
   data () {
     return {
@@ -43,8 +48,12 @@ export default {
     }
   },
   methods: {
-    showMenu () {
-      console.log('打开选项');
+    showMenu (iconType) {
+      if (iconType === 'plus') {
+        this.$refs.optionAction.$data.isShow = !this.$refs.optionAction.$data.isShow;
+        return
+      }
+      console.log('打开摄像头');
     },
   },
 
@@ -62,6 +71,13 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  .option {
+    position: absolute;
+    top: px2rem(60px);
+    right: px2rem(20px);
+    z-index: 5;
+  }
   main {
     width: 100%;
     height: 100%;
