@@ -8,4 +8,8 @@ export default class mockApiUrl {
   static getToken = `${mockApiUrl.domain}/getToken`
 
   static friendList = `${mockApiUrl.domain}/friendList`
+
+  static vueList = `${mockApiUrl.domain}/vueListUrl`
+
+  static jsNativeList = `${mockApiUrl.domain}/jsNativeList`
 }

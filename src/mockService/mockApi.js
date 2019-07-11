@@ -7,8 +7,18 @@ export default class mockApi {
     .then(res => Promise.resolve(res))
     .catch(err => Promise.reject(JSON.stringify(err)))
 
-     //获取名字列表
+  //获取名字列表
   static getFriendList = async () => axios.post(`${mockApiUrl.friendList}`)
-  .then(res => Promise.resolve(res))
-  .catch(err => Promise.reject(JSON.stringify(err)))
+    .then(res => Promise.resolve(res))
+    .catch(err => Promise.reject(JSON.stringify(err)))
+
+  //获取vue资料列表
+  static getVueList = async () => axios.post(`${mockApiUrl.vueList}`)
+    .then(res => Promise.resolve(res))
+    .catch(err => Promise.reject(JSON.stringify(err)))
+
+  //获取js原生资料列表
+  static getJsNativeList = async () => axios.post(`${mockApiUrl.jsNativeList}`)
+    .then(res => Promise.resolve(res))
+    .catch(err => Promise.reject(JSON.stringify(err)))
 }

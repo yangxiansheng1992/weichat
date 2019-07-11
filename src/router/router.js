@@ -6,6 +6,7 @@ import Amap from '@/views/chat/amap/index.vue';
 import VideoPage from '@/views/chat/video-page/index.vue';
 import AudioPage from '@/views/chat/audio-page/index.vue';
 import AnimationPage from '@/views/chat/animation-page/index.vue';
+import JsNative from '@/views/chat/js-native/index.vue';
 import Vue from '@/views/chat/vue/index.vue';
 // import VueBasis from '@/views/chat/vue/page/vue-basis/index.vue'
 // import VueExtension from '@/views/chat/vue/page/vue-extension/index.vue'
@@ -131,6 +132,14 @@ export default [
       title: '高德地图',
     },
     component: Amap,
+  },
+  {
+    path: '/js-native',
+    name: 'js-native',
+    meta: {
+      title: 'js原生知识',
+    },
+    component: JsNative,
   },
   {
     path: '/vue',

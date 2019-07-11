@@ -1,0 +1,600 @@
+// slideInDown
+@keyframes slideInDown {
+  from {
+    @include prefixer(transform, translate3d(0, -100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    @include prefixer(transform, translate3d(0, -100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-moz-keyframes slideInDown {
+  from {
+    @include prefixer(transform, translate3d(0, -100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-o-keyframes slideInDown {
+  from {
+    @include prefixer(transform, translate3d(0, -100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-ms-keyframes slideInDown {
+  from {
+    @include prefixer(transform, translate3d(0, -100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+.slideInDown {
+  @include prefixer(animation, slideInDown 0.6s ease 0s, webkit moz o ms);
+}
+
+@keyframes slideInUp {
+  from {
+    @include prefixer(transform, translate3d(0, 100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+// slideInUp
+@-webkit-keyframes slideInUp {
+  from {
+    @include prefixer(transform, translate3d(0, 100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-moz-keyframes slideInUp {
+  from {
+    @include prefixer(transform, translate3d(0, 100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-o-keyframes slideInUp {
+  from {
+    @include prefixer(transform, translate3d(0, 100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+@-ms-keyframes slideInUp {
+  from {
+    @include prefixer(transform, translate3d(0, 100%, 0), webkit moz o ms);
+    visibility: visible;
+  }
+
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+}
+
+.slideInUp {
+  @include prefixer(animation, slideInUp 0.6s ease 0s 1, webkit moz o ms);
+}
+
+// fadeIn
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  @include prefixer(animation, fadeIn 0.6s ease 0s 1, webkit moz o ms);
+}
+
+// fadeOut
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  @include prefixer(animation, fadeOut 0.6s ease 0s 1, webkit moz o ms);
+}
+
+// shake
+@keyframes shake {
+
+  from,
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    @include prefixer(transform, translate3d(-2px, 0, 0), webkit moz o ms);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    @include prefixer(transform, translate3d(2px, 0, 0), webkit moz o ms);
+  }
+}
+
+@-webkit-keyframes shake {
+
+  from,
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    @include prefixer(transform, translate3d(-2px, 0, 0), webkit moz o ms);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    @include prefixer(transform, translate3d(2px, 0, 0), webkit moz o ms);
+  }
+}
+
+@-moz-keyframes shake {
+
+  from,
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    @include prefixer(transform, translate3d(-2px, 0, 0), webkit moz o ms);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    @include prefixer(transform, translate3d(2px, 0, 0), webkit moz o ms);
+  }
+}
+
+@-o-keyframes shake {
+
+  from,
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    @include prefixer(transform, translate3d(-2px, 0, 0), webkit moz o ms);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    @include prefixer(transform, translate3d(2px, 0, 0), webkit moz o ms);
+  }
+}
+
+@-ms-keyframes shake {
+
+  from,
+  to {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    @include prefixer(transform, translate3d(-8px, 0, 0), webkit moz o ms);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    @include prefixer(transform, translate3d(8px, 0, 0), webkit moz o ms);
+  }
+}
+
+.shake {
+  @include prefixer(animation, shake 1s, webkit moz o ms);
+}
+
+//打字效果，长度有字体个数决定；
+.typing {
+  width: 7em;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: typing 3.5s steps(15, end), blink-caret 0.75s step-end infinite;
+  overflow: hidden;
+}
+/* 打印效果 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+/* 光标闪啊闪 */
+@keyframes blink-caret {
+  from,
+  to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+/* 打印效果 */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+/* 光标闪啊闪 */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+/* 打印效果 */
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+/* 光标闪啊闪 */
+@-moz-keyframes blink-caret {
+  from,
+  to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+@-o-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+/* 光标闪啊闪 */
+@-o-keyframes blink-caret {
+  from,
+  to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+@-ms-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+/* 光标闪啊闪 */
+@-ms-keyframes blink-caret {
+  from,
+  to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+
+
+//刷新按钮动画,圆圈旋转;
+@keyframes spin {
+  to {
+    @include prefixer(transform, rotate(360deg), webkit moz o ms);
+  }
+}
+
+@keyframes pulse {
+  from {
+    @include prefixer(transform, scale(0.5), webkit moz o ms);
+  }
+  to {
+    @include prefixer(transform, scale(1), webkit moz o ms);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    @include prefixer(transform, rotate(360deg), webkit moz o ms);
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    @include prefixer(transform, scale(0.5), webkit moz o ms);
+  }
+  to {
+    @include prefixer(transform, scale(1), webkit moz o ms);
+  }
+}
+@-moz-keyframes spin {
+  to {
+    @include prefixer(transform, rotate(360deg), webkit moz o ms);
+  }
+}
+
+@-moz-keyframes pulse {
+  from {
+    @include prefixer(transform, scale(0.5), webkit moz o ms);
+  }
+  to {
+    @include prefixer(transform, scale(1), webkit moz o ms);
+  }
+}
+@-o-keyframes spin {
+  to {
+    @include prefixer(transform, rotate(360deg), webkit moz o ms);
+  }
+}
+
+@-o-keyframes pulse {
+  from {
+     @include prefixer(transform, scale(0.5), webkit moz o ms);
+  }
+  to {
+    @include prefixer(transform, scale(1), webkit moz o ms);
+  }
+}
+@-ms-keyframes spin {
+  to {
+    @include prefixer(transform, rotate(360deg), webkit moz o ms);
+  }
+}
+@-ms-keyframes pulse {
+  from {
+     @include prefixer(transform, scale(0.5), webkit moz o ms);
+  }
+  to {
+    @include prefixer(transform, scale(1), webkit moz o ms);
+  }
+}
+//个人中心按钮动画，波动；
+@keyframes grow {
+  0%,
+  100% {
+    @include prefixer-value(transform, scaleY(1), webkit moz o ms);
+  }
+
+  50% {
+    @include prefixer-value(transform, scaleY(2), webkit moz o ms);
+  }
+}
+@-webkit-keyframes grow {
+  0%,
+  100% {
+    @include prefixer-value(transform, scaleY(1), webkit moz o ms);
+  }
+
+  50% {
+    @include prefixer-value(transform, scaleY(2), webkit moz o ms);
+  }
+}
+@-moz-keyframes grow {
+  0%,
+  100% {
+    @include prefixer-value(transform, scaleY(1), webkit moz o ms);
+  }
+
+  50% {
+    @include prefixer-value(transform, scaleY(2), webkit moz o ms);
+  }
+}
+@-o-keyframes grow {
+  0%,
+  100% {
+    @include prefixer-value(transform, scaleY(1), webkit moz o ms);
+  }
+
+  50% {
+    @include prefixer-value(transform, scaleY(2), webkit moz o ms);
+  }
+}
+@-ms-keyframes grow {
+  0%,
+  100% {
+    @include prefixer-value(transform, scaleY(1), webkit moz o ms);
+  }
+
+  50% {
+    @include prefixer-value(transform, scaleY(2), webkit moz o ms);
+  }
+}
+//大厅动画；
+@keyframes dots-fade {
+  to {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes dots-fade {
+  to {
+    opacity: 0.2;
+  }
+}
+@-moz-keyframes dots-fade {
+  to {
+    opacity: 0.2;
+  }
+}
+@-o-keyframes dots-fade {
+  to {
+    opacity: 0.2;
+  }
+}
+@-ms-keyframes dots-fade {
+  to {
+    opacity: 0.2;
+  }
+}

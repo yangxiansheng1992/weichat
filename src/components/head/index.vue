@@ -54,9 +54,6 @@ export default {
 @import "@/styles/compass.scss";
 
 .app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: px2rem(50px);
   color: #fff;

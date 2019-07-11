@@ -80,8 +80,7 @@ export default {
   }
   main {
     width: 100%;
-    height: 100%;
-    padding-top: px2rem(50px);
+    @include prefixer-value(height, calc(100% - 3.125rem), webkit moz o ms);
     overflow: hidden;
     .scroll {
       width: 100%;

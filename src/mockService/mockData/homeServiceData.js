@@ -34,6 +34,12 @@ Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
       id: 'amap',
     },
     {
+      title: 'js原生知识',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'js-native',
+    },
+    {
       title: 'vue知识点集中营',
       img: Mock.Random.image(),
       time: Mock.Random.time('A HH:mm:ss'),
