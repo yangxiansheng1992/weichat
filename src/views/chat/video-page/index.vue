@@ -8,7 +8,7 @@
 </template>
 <script>
 import Head from '@/components/head';
-import VideoPlayerBox from '../common/video-player-box';
+import VideoPlayerBox from '../components/video-player-box';
 
 export default {
   name: 'video-page',

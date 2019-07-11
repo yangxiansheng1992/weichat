@@ -32,7 +32,7 @@ export default {
     bgColor: {
       type: String,
       default: '#1e2b39'
-    }
+    },
   },
   computed: {
     style () {

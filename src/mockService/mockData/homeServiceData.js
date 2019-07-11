@@ -33,6 +33,18 @@ Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
       time: Mock.Random.time('A HH:mm:ss'),
       id: 'amap',
     },
+    {
+      title: 'vue知识点集中营',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'vue',
+    },
+    {
+      title: 'react知识点集中营',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'react',
+    },
   ],
 });
 

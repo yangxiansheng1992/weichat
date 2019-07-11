@@ -31,7 +31,7 @@
 import Head from '@/components/head';
 import { mapState } from 'vuex';
 import UserStorage from '@/storage/user';
-import ChatItem from './common/chat-item';
+import ChatItem from './chat-item/index';
 import { toolkit, showToast } from '@/config/tool';
 import Scroll from '@/components/scroll';
 import RYtool from '@/rongcloud/ryTool';

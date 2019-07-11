@@ -6,6 +6,12 @@ import Amap from '@/views/chat/amap/index.vue';
 import VideoPage from '@/views/chat/video-page/index.vue';
 import AudioPage from '@/views/chat/audio-page/index.vue';
 import AnimationPage from '@/views/chat/animation-page/index.vue';
+import Vue from '@/views/chat/vue/index.vue';
+// import VueBasis from '@/views/chat/vue/page/vue-basis/index.vue'
+// import VueExtension from '@/views/chat/vue/page/vue-extension/index.vue'
+// import VueUi from '@/views/chat/vue/page/vue-ui/index.vue'
+// import VueFunctional from '@/views/chat/vue/page/vue-functional/index.vue'
+import React from '@/views/chat/react/index.vue';
 
 // import ClientList from '@/views/clientList';
 // import Find from '@/views/find';
@@ -125,5 +131,53 @@ export default [
       title: '高德地图',
     },
     component: Amap,
+  },
+  {
+    path: '/vue',
+    name: 'vue',
+    component: Vue,
+    redirect: 'vue-basis',
+    children: [
+      {
+        path: '/vue-basis',
+        name: 'vue-basis',
+        meta: {
+          title: 'vue基础',
+        },
+        component: () => import('@/views/chat/vue/page/vue-basis/index.vue'),
+      },
+      {
+        path: '/vue-extension',
+        name: 'vue-extension',
+        meta: {
+          title: 'vue扩展',
+        },
+        component: () => import('@/views/chat/vue/page/vue-extension/index.vue'),
+      },
+      {
+        path: '/vue-ui',
+        name: 'vue-ui',
+        meta: {
+          title: 'vueUI库',
+        },
+        component: () => import('@/views/chat/vue/page/vue-ui/index.vue'),
+      },
+      {
+        path: '/vue-functional',
+        name: 'vue-functional',
+        meta: {
+          title: 'vue小功能',
+        },
+        component: () => import('@/views/chat/vue/page/vue-functional/index.vue'),
+      },
+    ]
+  },
+  {
+    path: '/react',
+    name: 'react',
+    meta: {
+      title: 'react知识点集中营',
+    },
+    component: React,
   },
 ];

@@ -23,7 +23,7 @@
 import Head from '@/components/head';
 import Scroll from '@/components/scroll';
 import IframeAnimate from '@/components/iframe/iframeAnimate.vue';
-import PopMenu from '../common/popup-menu/index';
+import PopMenu from '../components/popup-menu/index';
 
 export default {
   name: 'animation-page',

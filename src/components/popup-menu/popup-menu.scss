@@ -1,0 +1,107 @@
+
+.mint-popup {
+  border: px2rem(1px) solid $white;
+  border-radius: px2rem(5px);
+  background: transparent;
+  opacity: 0.85;
+  width: 90%;
+}
+/deep/.v-modal {
+  opacity: 0.75;
+}
+.modal-content {
+  min-width: px2rem(200px);
+  border-radius: px2rem(5px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $white;
+  .close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: px2rem(22px);
+    height: px2rem(22px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, -50%);
+    background-color: $popup_close_icon;
+    border: 1px solid $popup_close_icon;
+  }
+  .modal-info {
+    width: 96%;
+    height: 96%;
+    padding: 2%;
+    
+    .head {
+      width: 100%;
+      height: px2rem(30px);
+      line-height: px2rem(30px);
+      margin-bottom: px2rem(5px);
+      font-size: px2rem(16px);
+      font-weight: 600;
+      text-align: center;
+      color: $black;
+    }
+
+    .menu-box {
+      width: 100%;
+      height: 100%;
+      color: $white;
+    }
+    .link {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: px2rem(10px) 0;
+      .item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 33.33333%;
+        margin-bottom: px2rem(10px);
+  
+        .chatroom-icon {
+          width: px2rem(55px);
+          height: px2rem(55px);
+          border: px2rem(2px) solid $hall_lottery_icon_border;
+          border-radius: px2rem(10px);
+          color: $chatroom_leftmenu_icon;
+          @include prefixer-value(background-image,
+          $hall_lottery_xyft_bg,
+          webkit moz o ms);
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+  
+        .text {
+          font-size: px2rem(13px);
+          padding-top: px2rem(10px);
+        }
+        .page-icon{
+          font-size: px2rem(25px);
+          color:white;
+        } 
+        .page-icon:active{
+          color:#9b95c9;
+        }
+      }
+    }
+  }
+}
+
+
+/deep/.mint-popup-left {
+  height: 100%;
+}
+
+

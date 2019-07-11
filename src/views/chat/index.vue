@@ -19,7 +19,7 @@
 </template>
 <script>
 import mockApi from '@/mockService/mockApi';
-import ChatItem from './common/chat-item/index';
+import ChatItem from './components/chat-item/index';
 
 export default {
   name: 'chat',
