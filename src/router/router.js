@@ -189,4 +189,12 @@ export default [
     },
     component: React,
   },
+  {
+    path: '/read-page',
+    name: 'read-page',
+    meta: {
+      title: '战略性布局文档',
+    },
+    component: () => import('@/views/find/read-page'),
+  },
 ];

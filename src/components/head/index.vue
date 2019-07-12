@@ -72,6 +72,12 @@ export default {
     width: 70%;
     height: 100%;
     line-height: px2rem(50px);
+    @include prefixer-value(display, -webkit-box, webkit moz o ms);
+    @include prefixer-value(text-overflow, ellipsis, webkit moz o ms);
+    @include prefixer-value(-webkit-line-clamp, 1, webkit moz o ms);
+    overflow: hidden;
+    /*! autoprefixer: off */
+    @include prefixer-value(-webkit-box-orient, vertical, webkit moz o ms);
   }
   .search {
     width: 10%;

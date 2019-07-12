@@ -23,7 +23,7 @@ export default {
 .blackboard {
   width: 100%;
   height: px2rem(216px);
-  background: url("../../../../assets/vueimg/blackboard.jpg") no-repeat
+  background: url(../../../../assets/vueimg/blackboard.jpg) no-repeat
     center/cover;
   position: relative;
 }
@@ -43,7 +43,7 @@ export default {
 .right {
   float: right;
   color: #65c294;
-  width: px2rem(78px);
+  width: px2rem(88px);
   height: px2rem(48px);
   margin: px2rem(20px) px2rem(20px) 0 px2rem(1px);
   font-size: px2rem(12px);

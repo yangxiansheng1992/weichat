@@ -4,6 +4,9 @@
     <div class="classification">
       <span v-for="item in list" :key="item.id">{{ item.classinfo }}</span>
     </div>
+    <div class="classinfoList">
+      <p>原型链</p>
+    </div>
   </div>
 </template>
 <script>
@@ -32,7 +35,6 @@ export default {
     getJsNativeList () {
       mockApi.getJsNativeList()
         .then(({ data, status }) => {
-          console.log(data);
           if (!status) {
             // showToast('呀，出错啦！');
           }
@@ -69,7 +71,27 @@ export default {
       color: #f5f5f5;
       box-shadow: 0 0 0 1px #e14844;
     }
-    /* @include prefixer-value(height, calc(100% - 3.125rem), webkit moz o ms); */
+  }
+  .classinfoList {
+    width: 100%;
+    height: px2rem(200px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    p {
+      width: 33.333%;
+      height: px2rem(30px);
+      text-align: center;
+      line-height: px2rem(30px);
+      @include prefixer-value(display, -webkit-box, webkit moz o ms);
+      @include prefixer-value(text-overflow, ellipsis, webkit moz o ms);
+      @include prefixer-value(-webkit-line-clamp, 1, webkit moz o ms);
+      overflow: hidden;
+      /*! autoprefixer: off */
+      @include prefixer-value(-webkit-box-orient, vertical, webkit moz o ms);
+    }
   }
 }
 </style>

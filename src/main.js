@@ -12,20 +12,20 @@ import './mockService/mockData';
 import dayjs from 'dayjs';
 // import RYtool from './rongcloud/ryTool'
 
-import VueQuillEditor from 'vue-quill-editor'
-
+//富文本编辑器；
+import VueQuillEditor from 'vue-quill-editor';
 // require styles
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+import 'quill/dist/quill.core.css';
+import 'quill/dist/quill.snow.css';
+import 'quill/dist/quill.bubble.css';
 
 
-Vue.use(VueAMap);
+Vue.use(VueAMap);//高德地图
 VueAMap.initAMapApiLoader({
   key: '7d80a00c8d5506eaac8050a1bfb549e7',
   plugin: ['Autocomplete', 'PlaceSearch', 'Scale', 'OverView', 'ToolBar', 'MapType', 'PolyEditor', 'AMap.CircleEditor'],
   uiVersion: '1.0.11',
-  v: '1.4.4'
+  v: '1.4.4',
 });
 
 Vue.config.productionTip = false;

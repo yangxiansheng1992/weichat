@@ -33,7 +33,6 @@ export default {
     getVueList () {
       mockApi.getVueList()
         .then(({ data, status }) => {
-          console.log(data);
           if (!status) {
             // showToast('呀，出错啦！');
           }

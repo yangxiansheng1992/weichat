@@ -21,4 +21,9 @@ export default class mockApi {
   static getJsNativeList = async () => axios.post(`${mockApiUrl.jsNativeList}`)
     .then(res => Promise.resolve(res))
     .catch(err => Promise.reject(JSON.stringify(err)))
+
+  //获取战略性布局资料列表
+  static getStrategyList = async () => axios.post(`${mockApiUrl.strategyList}`)
+    .then(res => Promise.resolve(res))
+    .catch(err => Promise.reject(JSON.stringify(err)))
 }

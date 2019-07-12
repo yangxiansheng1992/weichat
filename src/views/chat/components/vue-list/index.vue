@@ -49,6 +49,7 @@ export default {
       span {
         padding: 0 px2rem(5px);
         color: violet;
+        font-size: px2rem(8px);
       }
       a {
         padding: 0 px2rem(5px);
