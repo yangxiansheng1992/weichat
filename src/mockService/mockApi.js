@@ -26,4 +26,9 @@ export default class mockApi {
   static getStrategyList = async () => axios.post(`${mockApiUrl.strategyList}`)
     .then(res => Promise.resolve(res))
     .catch(err => Promise.reject(JSON.stringify(err)))
+
+  //获取个人中心列表
+  static getMeItemList = async () => axios.post(`${mockApiUrl.meItemList}`)
+    .then(res => Promise.resolve(res))
+    .catch(err => Promise.reject(JSON.stringify(err)))
 }

@@ -83,7 +83,15 @@ export default [
     meta: {
       title: '注册',
     },
-    component: () => import('@/views/register'),
+    component: () => import('@/views/read-detail'),
+  },
+  {
+    path: '/read-detail',
+    name: 'read-detail',
+    meta: {
+      title: '读后感',
+    },
+    component: () => import('@/views/read-detail'),
   },
   {
     path: '/chatroom',

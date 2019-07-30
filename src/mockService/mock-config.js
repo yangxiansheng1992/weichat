@@ -15,4 +15,5 @@ export default class mockApiUrl {
 
   static strategyList = `${mockApiUrl.domain}/strategyList`
 
+  static meItemList = `${mockApiUrl.domain}/meItemList`
 }
