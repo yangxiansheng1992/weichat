@@ -51,6 +51,12 @@ Mock.mock(`${mockApiUrl.chatListUrl}`, 'post', {
       time: Mock.Random.time('A HH:mm:ss'),
       id: 'react',
     },
+    {
+      title: '学习css(pc端效果)',
+      img: Mock.Random.image(),
+      time: Mock.Random.time('A HH:mm:ss'),
+      id: 'css-study',
+    },
   ],
 });
 

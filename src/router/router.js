@@ -8,6 +8,7 @@ import AudioPage from '@/views/chat/audio-page/index.vue';
 import AnimationPage from '@/views/chat/animation-page/index.vue';
 import JsNative from '@/views/chat/js-native/index.vue';
 import Vue from '@/views/chat/vue/index.vue';
+import CssStudy from '@/views/chat/css-study/index.vue';
 // import VueBasis from '@/views/chat/vue/page/vue-basis/index.vue'
 // import VueExtension from '@/views/chat/vue/page/vue-extension/index.vue'
 // import VueUi from '@/views/chat/vue/page/vue-ui/index.vue'
@@ -148,6 +149,14 @@ export default [
       title: 'js原生知识',
     },
     component: JsNative,
+  },
+  {
+    path: '/css-study',
+    name: 'css-study',
+    meta: {
+      title: '学习css',
+    },
+    component: CssStudy,
   },
   {
     path: '/vue',
