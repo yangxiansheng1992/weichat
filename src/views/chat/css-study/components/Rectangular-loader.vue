@@ -1,9 +1,7 @@
 <template>
   <div class="rectangular">
     <div class="loader">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span v-for="item in 3" :key="item"></span>
     </div>
   </div>
 </template>

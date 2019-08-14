@@ -2,20 +2,31 @@
   <div class="js-native">
     <Head :title="userData.title" :isSearchShow="isSearchShow"></Head>
     <div class="classification">
-      <span v-for="item in list" :key="item.id">{{ item.classinfo }}</span>
+      <span
+        v-for="item in list"
+        :key="item.id"
+        @click="showPopup(item.popopName)"
+        >{{ item.title }}</span
+      >
     </div>
-    <div class="classinfoList">
-      <p>原型链</p>
-    </div>
+    <Popup ref="popup" color="#feeeed">
+      <div class="content" slot="content">
+        <me-svg v-show="isPopupShow === 'MeSvg'" />
+      </div>
+    </Popup>
   </div>
 </template>
 <script>
 import Head from '@/components/head';
 import mockApi from '@/mockService/mockApi';
+import Popup from '@/components/popup'
+import MeSvg from './components/meSvg/index';
 
 export default {
   components: {
     Head,
+    Popup,
+    MeSvg,
   },
   computed: {
     userData () {
@@ -26,6 +37,7 @@ export default {
     return {
       isSearchShow: false,
       list: [],
+      isPopupShow: '',
     }
   },
   created () {
@@ -45,6 +57,10 @@ export default {
           // showToast(err);
         });
     },
+    showPopup (popopName) {
+      this.isPopupShow = popopName;
+      this.$refs.popup.show();
+    }
   }
 }
 </script>
@@ -72,26 +88,8 @@ export default {
       box-shadow: 0 0 0 1px #e14844;
     }
   }
-  .classinfoList {
-    width: 100%;
-    height: px2rem(200px);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    p {
-      width: 33.333%;
-      height: px2rem(30px);
-      text-align: center;
-      line-height: px2rem(30px);
-      @include prefixer-value(display, -webkit-box, webkit moz o ms);
-      @include prefixer-value(text-overflow, ellipsis, webkit moz o ms);
-      @include prefixer-value(-webkit-line-clamp, 1, webkit moz o ms);
-      overflow: hidden;
-      /*! autoprefixer: off */
-      @include prefixer-value(-webkit-box-orient, vertical, webkit moz o ms);
-    }
+  .content {
+    min-height: px2rem(200px);
   }
 }
 </style>

@@ -43,10 +43,10 @@ export default {
   top: 0;
   left: 0;
   .modal-content {
-    width: 80%;
-    height: 80%;
-    margin-left: 10%;
-    margin-top: 10%;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 12.5%;
     box-sizing: border-box;
     padding: 10px;
     position: relative;
@@ -69,10 +69,10 @@ export default {
   .modal-content::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -8%;
-    width: 160%;
-    height: 165%;
+    top: -30%;
+    left: -30%;
+    width: 250%;
+    height: 250%;
     background: repeating-linear-gradient(
       white 0%,
       white 7.5px,
