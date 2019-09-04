@@ -41,14 +41,14 @@ export default {
     p {
       height: px2rem(60px);
       line-height: 30px;
-      font-size: px2rem(22px);
+      font-size: px2rem(16px);
     }
     div {
       display: flex;
       flex-direction: column;
       padding: 0 px2rem(5px);
       span:nth-child(1) {
-        font-size: px2rem(20px);
+        font-size: px2rem(14px);
         color: red;
       }
       span:nth-child(2) {

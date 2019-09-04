@@ -19,6 +19,7 @@
     "core-js": "^2.6.5",
     "dayjs": "^1.8.14",
     "express": "^4.17.1",
+    "jquery": "^3.4.1",
     "js-cookie": "^2.2.0",
     "mint-ui": "^2.2.13",
     "mockjs": "^1.0.1-beta3",
